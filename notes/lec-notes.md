@@ -91,8 +91,6 @@
     - [Subtitle #1](#subtitle-1-38)
   - [Lecture 40, 12/03/21 (Wk15): Conclusion](#lecture-40-120321-wk15-conclusion)
     - [Subtitle #1](#subtitle-1-39)
-  - [Lecture 41, 12/13/21 (Wk16): Conclusion](#lecture-41-121321-wk16-conclusion)
-    - [Subtitle #1](#subtitle-1-40)
 
 
 ## Lecture 1, 08/25/21 (Wk1): Introduction
@@ -333,11 +331,5 @@
 
 ### Subtitle #1
   
+*Note:* Final exam on Monday, 12/13/21 @ 8:00am-11:00am
 -
-
-## Lecture 41, 12/13/21 (Wk16): Conclusion
-
-### Subtitle #1
-  
--
-
