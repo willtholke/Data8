@@ -3,7 +3,7 @@
     University of California, Berkeley
     Instructors: David Wagner, Ani Adhikari
     daw@cs.berkeley.edu, adhikari@berkeley.edu
-    Office Hours: -
+    Office Hours: http://data8.org/fa21/office-hours.html
     Lecture: Mon/Wed/Fri 10:00am-11:00am 
     https://berkeley.zoom.us/j/97233924190
     Author: Will Tholke
@@ -103,8 +103,6 @@
 - **Final:** Monday, December 13, 8-11am PT
 - **Labs:** due Wednesdays, 9am
 - **Homework:** due Thursdays, 12am
-
-### [Course Textbook](https://inferentialthinking.com/chapters/intro.html)
 
 ## Lecture 2, 08/27/21 (Wk1): Cause and Effect
 

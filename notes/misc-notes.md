@@ -3,17 +3,17 @@
     University of California, Berkeley
     Instructors: David Wagner, Ani Adhikari
     daw@cs.berkeley.edu, adhikari@berkeley.edu
-    Office Hours: -
-    Lecture: Mon/Wed/Fri 10:00am-11:00am
+    Office Hours: http://data8.org/fa21/office-hours.html
+    Lecture: Mon/Wed/Fri 10:00am-11:00am 
     https://berkeley.zoom.us/j/97233924190
     Author: Will Tholke
 
 ### Resources
 
 - [Syllabus](http://data8.org/fa21/policies.html)
+- [Course Textbook](https://inferentialthinking.com/chapters/intro.html)
 - [Course Computing Platform](http://data8.datahub.berkeley.edu/)
 - [How To: Submit Asignments](https://drive.google.com/file/d/1mleabaG3jwCzatQPGS82w7Hlvo6A05Jm/view)
-
 
 ### Grade breakdown
 
