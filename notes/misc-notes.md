@@ -5,6 +5,7 @@
     daw@cs.berkeley.edu, adhikari@berkeley.edu
     Office Hours: -
     Lecture: Mon/Wed/Fri 10:00am-11:00am
+    https://berkeley.zoom.us/j/97233924190
     Author: Will Tholke
 
 ### Resources
