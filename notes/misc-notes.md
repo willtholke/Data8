@@ -25,5 +25,13 @@
 
 ### Important Notes
 
-- Attend lab section or submit completed lab by Wednesday morning at 8:59 am PT
+- Attend lab section or submit completed lab by Wednesday morning at 8:59 am PT; labs released at 8:59 am PT
 - Homeworks are released after lecture on Friday and due the following Thursday night
+
+### Jupyter Notebooks
+
+- Run a cell: `shift + return`
+- Interrupt an infinite loop with `Kernel > Interrupt`
+- If the last line in a cell has a value, Jupyter prints the value; however, it won't print prior lines
+
+### Subtitle
