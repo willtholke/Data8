@@ -21,7 +21,7 @@
   - [Lecture 3, 08/30/21 (Wk2): Tables](#lecture-3-083021-wk2-tables)
     - [Integers, Names, & Functions in Python](#integers-names--functions-in-python)
     - [Tables](#tables)
-    - [Table Operations](#table-operations)
+      - [Table Operations](#table-operations)
   - [Lecture 4, 09/01/21 (Wk2): Data Types](#lecture-4-090121-wk2-data-types)
     - [Subtitle #1](#subtitle-1)
   - [Lecture 5, 09/03/21 (Wk2): Building Tables](#lecture-5-090321-wk2-building-tables)
@@ -163,7 +163,7 @@ Check out the [Data8 Python Reference](http://data8.org/sp19/python-reference.ht
 - Each **row** represents one individual
 - Data within a **column** represents one attribute of the individuals
 
-### Table Operations
+#### Table Operations
 
 - `t.select(label)` - constructs a new table with just the specified columns
 - `t.drop(label)` - constructs a new table in which the specified columns are omitted
