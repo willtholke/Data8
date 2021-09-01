@@ -179,13 +179,13 @@ Check out the [Data8 Python Reference](http://data8.org/sp19/python-reference.ht
 
 ### Ints and Floats
 
-Python has two real number types:
+**Python has two real number types:**
 
 - **int:** integer of any size
   - never has a decimal point, e.g. `2` or `3`
 - **float:** a number with an optional fraction part
   - always has a decimal point, e.g. `2.0` or `3.14`
-  - some limitations: limited precision of 15-16 decimal places, arithmetic may result in the final few decimal places being wrong, have limited size
+  - s**ome limitations:** limited precision of 15-16 decimal places, arithmetic may result in the final few decimal places being wrong, have limited size
 
 ### Text, Strings, and Conversions
 
@@ -197,7 +197,7 @@ A string value is a snippet of text of any length
 
 ### Discussion Question
 
-Assume you have run the following statements:
+**Assume you have run the following statements:**
 
 ```py
 >>> x = 3
@@ -220,22 +220,22 @@ What is the source of error in each example?
 
 We've seen the following types so far:
 
-- int: 2
-- flaot: 2.2
-- str: 'Hello there!'
-- builtin_function_or_method: abs
-- Table
+- **int:** `2`
+- **float:** `2.2`
+- **str:** `'Hello there!'`
+- **builtin_function_or_method:** `abs()`
+- **Table**
 
 The `type()` function can tell you the type of a value
 
 ### Arrays
 
-An array contains a sequence of values:
-- All elements of an array should have the same type
+**An array contains a sequence of values:**
+
+- All elements of an array should have the **same type**
 - Arithmetic is applied to each individual element
 - Adding arrays together adds elements (if same length!)
 - A column of a table is an array
-
 
 ## Lecture 5, 09/03/21 (Wk2): Building Tables
 
