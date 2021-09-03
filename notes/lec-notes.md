@@ -29,77 +29,79 @@
     - [Types](#types)
     - [Arrays](#arrays)
   - [Lecture 5, 09/03/21 (Wk2): Building Tables](#lecture-5-090321-wk2-building-tables)
-    - [Subtitle #1](#subtitle-1)
+    - [Arrays (Continued)](#arrays-continued)
+    - [Ranges](#ranges)
+    - [Ways to Create a Table](#ways-to-create-a-table)
   - [Lecture 6, 09/08/21 (Wk3): Census](#lecture-6-090821-wk3-census)
-    - [Subtitle #1](#subtitle-1-1)
+    - [Subtitle #1](#subtitle-1)
   - [Lecture 7, 09/10/21 (Wk3): Charts](#lecture-7-091021-wk3-charts)
-    - [Subtitle #1](#subtitle-1-2)
+    - [Subtitle #1](#subtitle-1-1)
   - [Lecture 8, 09/13/21 (Wk4): Histograms](#lecture-8-091321-wk4-histograms)
-    - [Subtitle #1](#subtitle-1-3)
+    - [Subtitle #1](#subtitle-1-2)
   - [Lecture 9, 09/15/21 (Wk4): Functions](#lecture-9-091521-wk4-functions)
-    - [Subtitle #1](#subtitle-1-4)
+    - [Subtitle #1](#subtitle-1-3)
   - [Lecture 10, 09/17/21 (Wk4): Groups](#lecture-10-091721-wk4-groups)
-    - [Subtitle #1](#subtitle-1-5)
+    - [Subtitle #1](#subtitle-1-4)
   - [Lecture 11, 09/20/21 (Wk5): Joins](#lecture-11-092021-wk5-joins)
-    - [Subtitle #1](#subtitle-1-6)
+    - [Subtitle #1](#subtitle-1-5)
   - [Lecture 12, 09/22/21 (Wk5): Table Examples](#lecture-12-092221-wk5-table-examples)
-    - [Subtitle #1](#subtitle-1-7)
+    - [Subtitle #1](#subtitle-1-6)
   - [Lecture 13, 09/24/21 (Wk5): Iteration](#lecture-13-092421-wk5-iteration)
-    - [Subtitle #1](#subtitle-1-8)
+    - [Subtitle #1](#subtitle-1-7)
   - [Lecture 14, 09/27/21 (Wk6): Chance](#lecture-14-092721-wk6-chance)
-    - [Subtitle #1](#subtitle-1-9)
+    - [Subtitle #1](#subtitle-1-8)
   - [Lecture 15, 09/29/21 (Wk6): Sampling](#lecture-15-092921-wk6-sampling)
-    - [Subtitle #1](#subtitle-1-10)
+    - [Subtitle #1](#subtitle-1-9)
   - [Lecture 16, 10/01/21 (Wk6): Models](#lecture-16-100121-wk6-models)
-    - [Subtitle #1](#subtitle-1-11)
+    - [Subtitle #1](#subtitle-1-10)
   - [Lecture 17, 10/04/21 (Wk7): Comparing Distributions](#lecture-17-100421-wk7-comparing-distributions)
-    - [Subtitle #1](#subtitle-1-12)
+    - [Subtitle #1](#subtitle-1-11)
   - [Lecture 18, 10/06/21 (Wk7): Decisions and Uncertainty](#lecture-18-100621-wk7-decisions-and-uncertainty)
-    - [Subtitle #1](#subtitle-1-13)
+    - [Subtitle #1](#subtitle-1-12)
   - [Lecture 19, 10/08/21 (Wk7): A/B Testing](#lecture-19-100821-wk7-ab-testing)
-    - [Subtitle #1](#subtitle-1-14)
+    - [Subtitle #1](#subtitle-1-13)
   - [Lecture 20, 10/11/21 (Wk8): Causality](#lecture-20-101121-wk8-causality)
-    - [Subtitle #1](#subtitle-1-15)
+    - [Subtitle #1](#subtitle-1-14)
   - [Lecture 21, 10/13/21 (Wk8): Examples](#lecture-21-101321-wk8-examples)
-    - [Subtitle #1](#subtitle-1-16)
+    - [Subtitle #1](#subtitle-1-15)
   - [Lecture 22, 10/03/21 (Wk8): Midterm Review](#lecture-22-100321-wk8-midterm-review)
-    - [Subtitle #1](#subtitle-1-17)
+    - [Subtitle #1](#subtitle-1-16)
   - [Lecture 23, 10/18/21 (Wk9): Confidence Intervals](#lecture-23-101821-wk9-confidence-intervals)
-    - [Subtitle #1](#subtitle-1-18)
+    - [Subtitle #1](#subtitle-1-17)
   - [Lecture 24, 10/20/21 (Wk9): Interpreting Confidence](#lecture-24-102021-wk9-interpreting-confidence)
-    - [Subtitle #1](#subtitle-1-19)
+    - [Subtitle #1](#subtitle-1-18)
   - [Lecture 25, 10/22/21 (Wk9): Center and Spread](#lecture-25-102221-wk9-center-and-spread)
-    - [Subtitle #1](#subtitle-1-20)
+    - [Subtitle #1](#subtitle-1-19)
   - [Lecture 26, 10/25/21 (Wk10): The Normal Distribution](#lecture-26-102521-wk10-the-normal-distribution)
-    - [Subtitle #1](#subtitle-1-21)
+    - [Subtitle #1](#subtitle-1-20)
   - [Lecture 27, 10/27/21 (Wk10): Sample Means](#lecture-27-102721-wk10-sample-means)
-    - [Subtitle #1](#subtitle-1-22)
+    - [Subtitle #1](#subtitle-1-21)
   - [Lecture 28, 10/29/21 (Wk10): Designing Experiments](#lecture-28-102921-wk10-designing-experiments)
-    - [Subtitle #1](#subtitle-1-23)
+    - [Subtitle #1](#subtitle-1-22)
   - [Lecture 29, 11/01/21 (Wk11): Correlation](#lecture-29-110121-wk11-correlation)
-    - [Subtitle #1](#subtitle-1-24)
+    - [Subtitle #1](#subtitle-1-23)
   - [Lecture 30, 11/03/21 (Wk11): Linear Regression (and it's my birthday!)](#lecture-30-110321-wk11-linear-regression-and-its-my-birthday)
-    - [Subtitle #1](#subtitle-1-25)
+    - [Subtitle #1](#subtitle-1-24)
   - [Lecture 31, 11/05/21 (Wk11): Least Squares](#lecture-31-110521-wk11-least-squares)
-    - [Subtitle #1](#subtitle-1-26)
+    - [Subtitle #1](#subtitle-1-25)
   - [Lecture 32, 11/08/21 (Wk12): Residuals](#lecture-32-110821-wk12-residuals)
-    - [Subtitle #1](#subtitle-1-27)
+    - [Subtitle #1](#subtitle-1-26)
   - [Lecture 33, 11/10/21 (Wk12): Regression Inference](#lecture-33-111021-wk12-regression-inference)
-    - [Subtitle #1](#subtitle-1-28)
+    - [Subtitle #1](#subtitle-1-27)
   - [Lecture 34, 11/12/21 (Wk12): Privacy](#lecture-34-111221-wk12-privacy)
-    - [Subtitle #1](#subtitle-1-29)
+    - [Subtitle #1](#subtitle-1-28)
   - [Lecture 35, 11/15/21 (Wk13): Classification](#lecture-35-111521-wk13-classification)
-    - [Subtitle #1](#subtitle-1-30)
+    - [Subtitle #1](#subtitle-1-29)
   - [Lecture 36, 11/17/21 (Wk13): Classifiers](#lecture-36-111721-wk13-classifiers)
-    - [Subtitle #1](#subtitle-1-31)
+    - [Subtitle #1](#subtitle-1-30)
   - [Lecture 37, 11/19/21 (Wk13): Decisions](#lecture-37-111921-wk13-decisions)
-    - [Subtitle #1](#subtitle-1-32)
+    - [Subtitle #1](#subtitle-1-31)
   - [Lecture 38, 11/22/21 (Wk14): TBA](#lecture-38-112221-wk14-tba)
-    - [Subtitle #1](#subtitle-1-33)
+    - [Subtitle #1](#subtitle-1-32)
   - [Lecture 39, 11/29/21 (Wk15): TBA](#lecture-39-112921-wk15-tba)
-    - [Subtitle #1](#subtitle-1-34)
+    - [Subtitle #1](#subtitle-1-33)
   - [Lecture 40, 12/03/21 (Wk15): Conclusion](#lecture-40-120321-wk15-conclusion)
-    - [Subtitle #1](#subtitle-1-35)
+    - [Subtitle #1](#subtitle-1-34)
 
 
 ## Lecture 1, 08/25/21 (Wk1): Introduction
@@ -239,9 +241,65 @@ The `type()` function can tell you the type of a value
 
 ## Lecture 5, 09/03/21 (Wk2): Building Tables
 
-### Subtitle #1
-  
--
+### Arrays (Continued)
+
+```py
+>>> my_array = make_array(1, 2, 3, 4)  # assign array object to my_array
+>>> my_array
+array([1, 2, 3, 4])
+>>> len(my_array)  # returns the num items in an array
+4
+>>> sum(my_array)
+10
+>>> np.average(my_array)
+2.5
+>>> array_2 = make_array(70, 60, 90, 80)
+>>> array_2
+array([70, 60, 90, 80])
+>>> my_array + array_2  # arrays msut be the same length to add
+array([71, 62, 93, 84])
+>>> array_3 = make_array(5, 6, 7)
+>>> array_3 + array _2
+ValueError: operands could not be broadcast together with shapes (4,) (3,)
+>>> array_3.item(0)
+5
+```
+
+### Ranges
+
+A range is an array of consecutive numbers:
+
+- The range always includes start but excludes end
+- `np.arange(end)`: an array of increasing integers from 0 up to end
+- `np.arange(start, end)`: an array of increasing integers from start up to end
+- `np.arange(start, end, step)`: a range with `step` between consecutive values
+
+### Ways to Create a Table
+
+- `Table.read_table(filename)` reads a table from .csv
+- `Table()` creates an empty table
+- `select, where, sort` etc. is also useful
+
+```py
+>>> streets = make_array('Bancroft', 'Durant', 'Channing', 'Haste')
+>>> streets
+array(['Bancroft', 'Durant', 'Channing', 'Haste'], dtype='<U8')
+>>> Table()
+# no output
+>>> southside = Table().with_column('Streets', streets)
+>>> southside
+  ________
+| streets  |
+  ________
+| Bancroft |
+  ________
+| Durant   |
+  ________
+| Channing |
+  ________
+| Haste    |
+  ________
+```
 
 ## Lecture 6, 09/08/21 (Wk3): Census
 

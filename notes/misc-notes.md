@@ -15,6 +15,7 @@
 - [Course Textbook](https://inferentialthinking.com/chapters/intro.html)
 - [Course Computing Platform](http://data8.datahub.berkeley.edu/)
 - [How To: Submit Asignments](https://drive.google.com/file/d/1mleabaG3jwCzatQPGS82w7Hlvo6A05Jm/view)
+- [Data8 Python Reference](http://data8.org/fa21/python-reference.html)
 
 ### Grade breakdown
 
