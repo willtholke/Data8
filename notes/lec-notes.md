@@ -6,7 +6,7 @@
     Office Hours: 12:00 pm - 5 pm in 145 Moffitt
     http://data8.org/fa21/office-hours.html
     Lecture: Mon/Wed/Fri 10:00am-11:00am 
-    https://berkeley.zoom.us/j/97233924190
+    https://berkeley.zoom.us/j/97862154992
     Author: Will Tholke
 
 ## Table of Contents
