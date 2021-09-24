@@ -65,62 +65,67 @@
     - [What about list -> array conversion?](#what-about-list---array-conversion)
   - [Lecture 12, 09/22/21 (Wk5): Table Examples](#lecture-12-092221-wk5-table-examples)
     - [Important Table Methods](#important-table-methods)
-  - [Lecture 13, 09/24/21 (Wk5): Iteration](#lecture-13-092421-wk5-iteration)
-    - [Subtitle #1](#subtitle-1)
+  - [Lecture 13, 09/24/21 (Wk5): Conditionals & Iteration](#lecture-13-092421-wk5-conditionals--iteration)
+    - [Comparison Operators](#comparison-operators)
+    - [Control Statements](#control-statements)
+    - [Random](#random)
+- [A Longer Array](#a-longer-array)
+- [`for` Statements](#for-statements)
+- [Advanced `where`](#advanced-where)
   - [Lecture 14, 09/27/21 (Wk6): Chance](#lecture-14-092721-wk6-chance)
-    - [Subtitle #1](#subtitle-1-1)
+    - [Subtitle #1](#subtitle-1)
   - [Lecture 15, 09/29/21 (Wk6): Sampling](#lecture-15-092921-wk6-sampling)
-    - [Subtitle #1](#subtitle-1-2)
+    - [Subtitle #1](#subtitle-1-1)
   - [Lecture 16, 10/01/21 (Wk6): Models](#lecture-16-100121-wk6-models)
-    - [Subtitle #1](#subtitle-1-3)
+    - [Subtitle #1](#subtitle-1-2)
   - [Lecture 17, 10/04/21 (Wk7): Comparing Distributions](#lecture-17-100421-wk7-comparing-distributions)
-    - [Subtitle #1](#subtitle-1-4)
+    - [Subtitle #1](#subtitle-1-3)
   - [Lecture 18, 10/06/21 (Wk7): Decisions and Uncertainty](#lecture-18-100621-wk7-decisions-and-uncertainty)
-    - [Subtitle #1](#subtitle-1-5)
+    - [Subtitle #1](#subtitle-1-4)
   - [Lecture 19, 10/08/21 (Wk7): A/B Testing](#lecture-19-100821-wk7-ab-testing)
-    - [Subtitle #1](#subtitle-1-6)
+    - [Subtitle #1](#subtitle-1-5)
   - [Lecture 20, 10/11/21 (Wk8): Causality](#lecture-20-101121-wk8-causality)
-    - [Subtitle #1](#subtitle-1-7)
+    - [Subtitle #1](#subtitle-1-6)
   - [Lecture 21, 10/13/21 (Wk8): Examples](#lecture-21-101321-wk8-examples)
-    - [Subtitle #1](#subtitle-1-8)
+    - [Subtitle #1](#subtitle-1-7)
   - [Lecture 22, 10/03/21 (Wk8): Midterm Review](#lecture-22-100321-wk8-midterm-review)
-    - [Subtitle #1](#subtitle-1-9)
+    - [Subtitle #1](#subtitle-1-8)
   - [Lecture 23, 10/18/21 (Wk9): Confidence Intervals](#lecture-23-101821-wk9-confidence-intervals)
-    - [Subtitle #1](#subtitle-1-10)
+    - [Subtitle #1](#subtitle-1-9)
   - [Lecture 24, 10/20/21 (Wk9): Interpreting Confidence](#lecture-24-102021-wk9-interpreting-confidence)
-    - [Subtitle #1](#subtitle-1-11)
+    - [Subtitle #1](#subtitle-1-10)
   - [Lecture 25, 10/22/21 (Wk9): Center and Spread](#lecture-25-102221-wk9-center-and-spread)
-    - [Subtitle #1](#subtitle-1-12)
+    - [Subtitle #1](#subtitle-1-11)
   - [Lecture 26, 10/25/21 (Wk10): The Normal Distribution](#lecture-26-102521-wk10-the-normal-distribution)
-    - [Subtitle #1](#subtitle-1-13)
+    - [Subtitle #1](#subtitle-1-12)
   - [Lecture 27, 10/27/21 (Wk10): Sample Means](#lecture-27-102721-wk10-sample-means)
-    - [Subtitle #1](#subtitle-1-14)
+    - [Subtitle #1](#subtitle-1-13)
   - [Lecture 28, 10/29/21 (Wk10): Designing Experiments](#lecture-28-102921-wk10-designing-experiments)
-    - [Subtitle #1](#subtitle-1-15)
+    - [Subtitle #1](#subtitle-1-14)
   - [Lecture 29, 11/01/21 (Wk11): Correlation](#lecture-29-110121-wk11-correlation)
-    - [Subtitle #1](#subtitle-1-16)
+    - [Subtitle #1](#subtitle-1-15)
   - [Lecture 30, 11/03/21 (Wk11): Linear Regression (and it's my birthday!)](#lecture-30-110321-wk11-linear-regression-and-its-my-birthday)
-    - [Subtitle #1](#subtitle-1-17)
+    - [Subtitle #1](#subtitle-1-16)
   - [Lecture 31, 11/05/21 (Wk11): Least Squares](#lecture-31-110521-wk11-least-squares)
-    - [Subtitle #1](#subtitle-1-18)
+    - [Subtitle #1](#subtitle-1-17)
   - [Lecture 32, 11/08/21 (Wk12): Residuals](#lecture-32-110821-wk12-residuals)
-    - [Subtitle #1](#subtitle-1-19)
+    - [Subtitle #1](#subtitle-1-18)
   - [Lecture 33, 11/10/21 (Wk12): Regression Inference](#lecture-33-111021-wk12-regression-inference)
-    - [Subtitle #1](#subtitle-1-20)
+    - [Subtitle #1](#subtitle-1-19)
   - [Lecture 34, 11/12/21 (Wk12): Privacy](#lecture-34-111221-wk12-privacy)
-    - [Subtitle #1](#subtitle-1-21)
+    - [Subtitle #1](#subtitle-1-20)
   - [Lecture 35, 11/15/21 (Wk13): Classification](#lecture-35-111521-wk13-classification)
-    - [Subtitle #1](#subtitle-1-22)
+    - [Subtitle #1](#subtitle-1-21)
   - [Lecture 36, 11/17/21 (Wk13): Classifiers](#lecture-36-111721-wk13-classifiers)
-    - [Subtitle #1](#subtitle-1-23)
+    - [Subtitle #1](#subtitle-1-22)
   - [Lecture 37, 11/19/21 (Wk13): Decisions](#lecture-37-111921-wk13-decisions)
-    - [Subtitle #1](#subtitle-1-24)
+    - [Subtitle #1](#subtitle-1-23)
   - [Lecture 38, 11/22/21 (Wk14): TBA](#lecture-38-112221-wk14-tba)
-    - [Subtitle #1](#subtitle-1-25)
+    - [Subtitle #1](#subtitle-1-24)
   - [Lecture 39, 11/29/21 (Wk15): TBA](#lecture-39-112921-wk15-tba)
-    - [Subtitle #1](#subtitle-1-26)
+    - [Subtitle #1](#subtitle-1-25)
   - [Lecture 40, 12/03/21 (Wk15): Conclusion](#lecture-40-120321-wk15-conclusion)
-    - [Subtitle #1](#subtitle-1-27)
+    - [Subtitle #1](#subtitle-1-26)
 
 
 ## Lecture 1, 08/25/21 (Wk1): Introduction
@@ -614,11 +619,73 @@ You can only convert a list to an array when all of the elements in the list are
 >>> t.join(column, other_table, other_table_column)
 ```
 
-## Lecture 13, 09/24/21 (Wk5): Iteration
+## Lecture 13, 09/24/21 (Wk5): Conditionals & Iteration
 
-### Subtitle #1
+### Comparison Operators
+
+Note that the result of a comparison expression is a `bool` value, named after [George Boole](https://en.wikipedia.org/wiki/George_Boole)
+
+
+```py
+# Assignment Statement
+>>> x = 2
+>>> y = 3
+
+# Comparison Expression
+>>> x > 1
+True
+>>> x > 100
+False
+>>> x == y
+False
+>>> 2 < x < 5
+False
+>>> 1 + 1 + 0 == 2
+True
+```
+
+### Control Statements
+
+These statements *control* the sequence of computations that are performed in a program
+
+- The keywords `if` and `for` begin control statemnets
+- The purpose of an `if` statement is to define functions that choose different behavior based on their arguments
   
--
+
+### Random
+
+`np.random.choice`:
+
+- Selects uniformly at random
+- with replacement
+- from an array
+- a specified number of times
+  - e.x.: `np.random.choice(some_array, sample_size)`
+
+# A Longer Array
+
+`np.append(array_1, value)`
+
+- new array with `value` appended to `array_1`
+- `value` has to be of the same type of elements as `array_1`
+
+# `for` Statements
+
+- `for` is a keyword that beings a control statement
+  - You can think about `for` as "for item in iterable"
+- `for` performs a computation for every element in a list or array
+  
+```py
+for item in some_array:
+  print(item)
+```
+
+# Advanced `where`
+
+`t.where(array_of_bool_values)`
+
+- returns a table with only the rows of t for which the corresponding `bool` is True
+
 
 ## Lecture 14, 09/27/21 (Wk6): Chance
 
