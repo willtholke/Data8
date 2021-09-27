@@ -748,7 +748,6 @@ P(A) = P(first way) + P(second way)
 - In 10 tosses:
   - 1 - (1/2)**10 = 99.9%
 
-
 ## Lecture 15, 09/29/21 (Wk6): Sampling
 
 ### Subtitle #1
