@@ -90,55 +90,57 @@
     - [Terminology](#terminology)
     - [The Catch: Probability vs. Empirical Distributions](#the-catch-probability-vs-empirical-distributions)
   - [Lecture 16, 10/01/21 (Wk6): Models](#lecture-16-100121-wk6-models)
-    - [Subtitle #1](#subtitle-1)
+    - [Assessing Models](#assessing-models)
+    - [Approach to Assessment](#approach-to-assessment)
+    - [Steps to Assessment](#steps-to-assessment)
   - [Lecture 17, 10/04/21 (Wk7): Comparing Distributions](#lecture-17-100421-wk7-comparing-distributions)
-    - [Subtitle #1](#subtitle-1-1)
+    - [Subtitle #1](#subtitle-1)
   - [Lecture 18, 10/06/21 (Wk7): Decisions and Uncertainty](#lecture-18-100621-wk7-decisions-and-uncertainty)
-    - [Subtitle #1](#subtitle-1-2)
+    - [Subtitle #1](#subtitle-1-1)
   - [Lecture 19, 10/08/21 (Wk7): A/B Testing](#lecture-19-100821-wk7-ab-testing)
-    - [Subtitle #1](#subtitle-1-3)
+    - [Subtitle #1](#subtitle-1-2)
   - [Lecture 20, 10/11/21 (Wk8): Causality](#lecture-20-101121-wk8-causality)
-    - [Subtitle #1](#subtitle-1-4)
+    - [Subtitle #1](#subtitle-1-3)
   - [Lecture 21, 10/13/21 (Wk8): Examples](#lecture-21-101321-wk8-examples)
-    - [Subtitle #1](#subtitle-1-5)
+    - [Subtitle #1](#subtitle-1-4)
   - [Lecture 22, 10/03/21 (Wk8): Midterm Review](#lecture-22-100321-wk8-midterm-review)
-    - [Subtitle #1](#subtitle-1-6)
+    - [Subtitle #1](#subtitle-1-5)
   - [Lecture 23, 10/18/21 (Wk9): Confidence Intervals](#lecture-23-101821-wk9-confidence-intervals)
-    - [Subtitle #1](#subtitle-1-7)
+    - [Subtitle #1](#subtitle-1-6)
   - [Lecture 24, 10/20/21 (Wk9): Interpreting Confidence](#lecture-24-102021-wk9-interpreting-confidence)
-    - [Subtitle #1](#subtitle-1-8)
+    - [Subtitle #1](#subtitle-1-7)
   - [Lecture 25, 10/22/21 (Wk9): Center and Spread](#lecture-25-102221-wk9-center-and-spread)
-    - [Subtitle #1](#subtitle-1-9)
+    - [Subtitle #1](#subtitle-1-8)
   - [Lecture 26, 10/25/21 (Wk10): The Normal Distribution](#lecture-26-102521-wk10-the-normal-distribution)
-    - [Subtitle #1](#subtitle-1-10)
+    - [Subtitle #1](#subtitle-1-9)
   - [Lecture 27, 10/27/21 (Wk10): Sample Means](#lecture-27-102721-wk10-sample-means)
-    - [Subtitle #1](#subtitle-1-11)
+    - [Subtitle #1](#subtitle-1-10)
   - [Lecture 28, 10/29/21 (Wk10): Designing Experiments](#lecture-28-102921-wk10-designing-experiments)
-    - [Subtitle #1](#subtitle-1-12)
+    - [Subtitle #1](#subtitle-1-11)
   - [Lecture 29, 11/01/21 (Wk11): Correlation](#lecture-29-110121-wk11-correlation)
-    - [Subtitle #1](#subtitle-1-13)
+    - [Subtitle #1](#subtitle-1-12)
   - [Lecture 30, 11/03/21 (Wk11): Linear Regression (and it's my birthday!)](#lecture-30-110321-wk11-linear-regression-and-its-my-birthday)
-    - [Subtitle #1](#subtitle-1-14)
+    - [Subtitle #1](#subtitle-1-13)
   - [Lecture 31, 11/05/21 (Wk11): Least Squares](#lecture-31-110521-wk11-least-squares)
-    - [Subtitle #1](#subtitle-1-15)
+    - [Subtitle #1](#subtitle-1-14)
   - [Lecture 32, 11/08/21 (Wk12): Residuals](#lecture-32-110821-wk12-residuals)
-    - [Subtitle #1](#subtitle-1-16)
+    - [Subtitle #1](#subtitle-1-15)
   - [Lecture 33, 11/10/21 (Wk12): Regression Inference](#lecture-33-111021-wk12-regression-inference)
-    - [Subtitle #1](#subtitle-1-17)
+    - [Subtitle #1](#subtitle-1-16)
   - [Lecture 34, 11/12/21 (Wk12): Privacy](#lecture-34-111221-wk12-privacy)
-    - [Subtitle #1](#subtitle-1-18)
+    - [Subtitle #1](#subtitle-1-17)
   - [Lecture 35, 11/15/21 (Wk13): Classification](#lecture-35-111521-wk13-classification)
-    - [Subtitle #1](#subtitle-1-19)
+    - [Subtitle #1](#subtitle-1-18)
   - [Lecture 36, 11/17/21 (Wk13): Classifiers](#lecture-36-111721-wk13-classifiers)
-    - [Subtitle #1](#subtitle-1-20)
+    - [Subtitle #1](#subtitle-1-19)
   - [Lecture 37, 11/19/21 (Wk13): Decisions](#lecture-37-111921-wk13-decisions)
-    - [Subtitle #1](#subtitle-1-21)
+    - [Subtitle #1](#subtitle-1-20)
   - [Lecture 38, 11/22/21 (Wk14): TBA](#lecture-38-112221-wk14-tba)
-    - [Subtitle #1](#subtitle-1-22)
+    - [Subtitle #1](#subtitle-1-21)
   - [Lecture 39, 11/29/21 (Wk15): TBA](#lecture-39-112921-wk15-tba)
-    - [Subtitle #1](#subtitle-1-23)
+    - [Subtitle #1](#subtitle-1-22)
   - [Lecture 40, 12/03/21 (Wk15): Conclusion](#lecture-40-120321-wk15-conclusion)
-    - [Subtitle #1](#subtitle-1-24)
+    - [Subtitle #1](#subtitle-1-23)
 
 
 ## Lecture 1, 08/25/21 (Wk1): Introduction
@@ -832,13 +834,29 @@ Note that, if the sample size is large, the **empirical distribution** of a **un
   - consist of all the observed values of the statistic and the proportion of times each value appeared
   - is a good approximation to the probability distribution of the statistic (iff the number of repetitions in the simulation is *fairly large*)
 
-
-
 ## Lecture 16, 10/01/21 (Wk6): Models
 
-### Subtitle #1
+### Assessing Models
   
--
+- A **model** is a set of assumptions about the data
+- In data science, many models involve assumptions about processes that involve randomness, such as **chance models**
+
+The key question we want to ask is, *does the model fit thed data?*
+
+### Approach to Assessment
+
+- If we're able to simulate data according to the assumptions of the model, we can learn what the model predicts
+- Then, we can compare the predictions to the data that were observed
+- If *both* the data and the model's predictions are not consistent, that is evidence *against* the model!
+
+### Steps to Assessment
+
+- *Choose a statistic* to measure discrepancy between model and data
+- *Simulate the statistics* under the model's assumptions
+- *Compare* the data to the model's predictions
+  - Draw a histogram of simulated values of the statistic
+  - Compute the observed statistic from the real sample
+- If the observed statistic is far from the histogram, that is evidence against the model
 
 ## Lecture 17, 10/04/21 (Wk7): Comparing Distributions
 
