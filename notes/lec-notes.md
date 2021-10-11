@@ -109,49 +109,50 @@
     - [Terminology: *p-value* (observed significance level)](#terminology-p-value-observed-significance-level)
     - [Terminology: *Error Probability*](#terminology-error-probability)
   - [Lecture 19, 10/08/21 (Wk7): A/B Testing](#lecture-19-100821-wk7-ab-testing)
-    - [Subtitle #1](#subtitle-1)
+    - [Introduction to A/B Testing](#introduction-to-ab-testing)
+    - [Example: Smoking, Ladies, & Babies](#example-smoking-ladies--babies)
   - [Lecture 20, 10/11/21 (Wk8): Causality](#lecture-20-101121-wk8-causality)
-    - [Subtitle #1](#subtitle-1-1)
+    - [Subtitle #1](#subtitle-1)
   - [Lecture 21, 10/13/21 (Wk8): Examples](#lecture-21-101321-wk8-examples)
-    - [Subtitle #1](#subtitle-1-2)
+    - [Subtitle #1](#subtitle-1-1)
   - [Lecture 22, 10/03/21 (Wk8): Midterm Review](#lecture-22-100321-wk8-midterm-review)
-    - [Subtitle #1](#subtitle-1-3)
+    - [Subtitle #1](#subtitle-1-2)
   - [Lecture 23, 10/18/21 (Wk9): Confidence Intervals](#lecture-23-101821-wk9-confidence-intervals)
-    - [Subtitle #1](#subtitle-1-4)
+    - [Subtitle #1](#subtitle-1-3)
   - [Lecture 24, 10/20/21 (Wk9): Interpreting Confidence](#lecture-24-102021-wk9-interpreting-confidence)
-    - [Subtitle #1](#subtitle-1-5)
+    - [Subtitle #1](#subtitle-1-4)
   - [Lecture 25, 10/22/21 (Wk9): Center and Spread](#lecture-25-102221-wk9-center-and-spread)
-    - [Subtitle #1](#subtitle-1-6)
+    - [Subtitle #1](#subtitle-1-5)
   - [Lecture 26, 10/25/21 (Wk10): The Normal Distribution](#lecture-26-102521-wk10-the-normal-distribution)
-    - [Subtitle #1](#subtitle-1-7)
+    - [Subtitle #1](#subtitle-1-6)
   - [Lecture 27, 10/27/21 (Wk10): Sample Means](#lecture-27-102721-wk10-sample-means)
-    - [Subtitle #1](#subtitle-1-8)
+    - [Subtitle #1](#subtitle-1-7)
   - [Lecture 28, 10/29/21 (Wk10): Designing Experiments](#lecture-28-102921-wk10-designing-experiments)
-    - [Subtitle #1](#subtitle-1-9)
+    - [Subtitle #1](#subtitle-1-8)
   - [Lecture 29, 11/01/21 (Wk11): Correlation](#lecture-29-110121-wk11-correlation)
-    - [Subtitle #1](#subtitle-1-10)
+    - [Subtitle #1](#subtitle-1-9)
   - [Lecture 30, 11/03/21 (Wk11): Linear Regression (and it's my birthday!)](#lecture-30-110321-wk11-linear-regression-and-its-my-birthday)
-    - [Subtitle #1](#subtitle-1-11)
+    - [Subtitle #1](#subtitle-1-10)
   - [Lecture 31, 11/05/21 (Wk11): Least Squares](#lecture-31-110521-wk11-least-squares)
-    - [Subtitle #1](#subtitle-1-12)
+    - [Subtitle #1](#subtitle-1-11)
   - [Lecture 32, 11/08/21 (Wk12): Residuals](#lecture-32-110821-wk12-residuals)
-    - [Subtitle #1](#subtitle-1-13)
+    - [Subtitle #1](#subtitle-1-12)
   - [Lecture 33, 11/10/21 (Wk12): Regression Inference](#lecture-33-111021-wk12-regression-inference)
-    - [Subtitle #1](#subtitle-1-14)
+    - [Subtitle #1](#subtitle-1-13)
   - [Lecture 34, 11/12/21 (Wk12): Privacy](#lecture-34-111221-wk12-privacy)
-    - [Subtitle #1](#subtitle-1-15)
+    - [Subtitle #1](#subtitle-1-14)
   - [Lecture 35, 11/15/21 (Wk13): Classification](#lecture-35-111521-wk13-classification)
-    - [Subtitle #1](#subtitle-1-16)
+    - [Subtitle #1](#subtitle-1-15)
   - [Lecture 36, 11/17/21 (Wk13): Classifiers](#lecture-36-111721-wk13-classifiers)
-    - [Subtitle #1](#subtitle-1-17)
+    - [Subtitle #1](#subtitle-1-16)
   - [Lecture 37, 11/19/21 (Wk13): Decisions](#lecture-37-111921-wk13-decisions)
-    - [Subtitle #1](#subtitle-1-18)
+    - [Subtitle #1](#subtitle-1-17)
   - [Lecture 38, 11/22/21 (Wk14): TBA](#lecture-38-112221-wk14-tba)
-    - [Subtitle #1](#subtitle-1-19)
+    - [Subtitle #1](#subtitle-1-18)
   - [Lecture 39, 11/29/21 (Wk15): TBA](#lecture-39-112921-wk15-tba)
-    - [Subtitle #1](#subtitle-1-20)
+    - [Subtitle #1](#subtitle-1-19)
   - [Lecture 40, 12/03/21 (Wk15): Conclusion](#lecture-40-120321-wk15-conclusion)
-    - [Subtitle #1](#subtitle-1-21)
+    - [Subtitle #1](#subtitle-1-20)
 
 
 ## Lecture 1, 08/25/21 (Wk1): Introduction
@@ -1010,12 +1011,43 @@ So, why 5%? It's because of Sir Ronald Fisher (1890-1962)!
 "It is convenient to take this point [5%] as a limit in judging whether a deviation is to be considered significant or not."
 – Statistical Methods for Research Workers, 1925
 
-
 ## Lecture 19, 10/08/21 (Wk7): A/B Testing
 
-### Subtitle #1
+### Introduction to A/B Testing
   
--
+- Compare values of sampled individuals in *Group A* with values of sampled individuals in *Group B*
+
+In order to answer the question, "Do the two sets of values come from the same underlying distribution?", we have to perform a statistical test called **A/B Testing**
+
+### Example: Smoking, Ladies, & Babies
+
+- Random samples of mothers of newborns. Compare:
+  - **(A)** Birth weights of babies of mothers who smoked during pregnancy
+  - **(B)** Birth weights of babies of mothers who didn't smoke
+
+**Question:** could the difference be due to chance alone?
+
+What's one easy way to remember what **A/B Testing** is?
+
+**Null Hypothesis:** in the population, the distributions of the birth weights of the babies in the two groups are the same (They are different in the smaple just due to cahance alone)
+
+**Alternative:** in the population, the babies of the mothers who didn't smoke were heavier, on average, than the babies of the smokers
+
+**Test Statistic:** Difference between average weights, where Group A = smokers, Group B = non-smokers
+- `Group B average - Group A Average`
+- `Weight of non-smokers - weight of smokers`
+
+Now, let's simulate under the null hypothesis!
+
+If the null is true, all rearrangements of the birth weights among the two groups are equally likely
+
+**Plan:**
+- Shuffle all the birth weights
+- Assign some to "Group A" and the rest to "Group B", maintaining the two sample sizes
+- Find the difference between the averages of the two shuffled groups
+
+[Click here to see the demo!](https://data8.datahub.berkeley.edu/hub/spawn-pending/willtholke?next=%2Fuser%2Fwilltholke%2Fgit-sync%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fdata-8%252Fmaterials-fa21%26subPath%3Dlec%252Flec19.ipynb)
+
 
 ## Lecture 20, 10/11/21 (Wk8): Causality
 
