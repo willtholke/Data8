@@ -114,6 +114,7 @@
   - [Lecture 20, 10/11/21 (Wk8): Causality](#lecture-20-101121-wk8-causality)
     - [Randomized Controlled Experiment](#randomized-controlled-experiment)
     - [Example: Randomized Controlled Experiment](#example-randomized-controlled-experiment)
+    - [Shortcut to Finding a Proportion](#shortcut-to-finding-a-proportion)
   - [Lecture 21, 10/13/21 (Wk8): Examples](#lecture-21-101321-wk8-examples)
     - [Subtitle #1](#subtitle-1)
   - [Lecture 22, 10/03/21 (Wk8): Midterm Review](#lecture-22-100321-wk8-midterm-review)
@@ -1072,6 +1073,14 @@ Any difference in outcomes between the two groups could be due either to *chance
 
 - **Null:** The distribution of all 31 potential control scores is the same as the distribution of all 31 potential treatment stores
 - **Alternative:** More (or fewer) of the potential treatment scores are 1 (pain improves) than the potential control scores.
+
+### Shortcut to Finding a Proportion
+
+
+```
+>>> tbl.pivot('Result', 'Group')
+>>> tbl.group('Group', np.average)
+```
 
 ## Lecture 21, 10/13/21 (Wk8): Examples
 
