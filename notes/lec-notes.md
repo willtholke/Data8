@@ -121,43 +121,50 @@
       - [Discussion Question 2](#discussion-question-2)
       - [Discussion Question 3](#discussion-question-3)
   - [Lecture 22, 10/03/21 (Wk8): Midterm Review](#lecture-22-100321-wk8-midterm-review)
-    - [Subtitle #1](#subtitle-1)
-  - [Lecture 23, 10/18/21 (Wk9): Confidence Intervals](#lecture-23-101821-wk9-confidence-intervals)
-    - [Subtitle #1](#subtitle-1-1)
+    - [Midterm Review Lecture Slides](#midterm-review-lecture-slides)
+  - [Lecture 23, 10/18/21 (Wk9): Estimation, Percentiles, & Bootstrap](#lecture-23-101821-wk9-estimation-percentiles--bootstrap)
+    - [Estimation & Percentile](#estimation--percentile)
+    - [Contextualizing "Percentile"](#contextualizing-percentile)
+    - [The `percentile` Function](#the-percentile-function)
+    - [Variability of the estimate](#variability-of-the-estimate)
+    - [Where to Get Another Sample?](#where-to-get-another-sample)
+    - [Bootstrapping!](#bootstrapping)
+    - [Key to Resampling](#key-to-resampling)
+    - [Example: Taking a Bootstrap Sample](#example-taking-a-bootstrap-sample)
   - [Lecture 24, 10/20/21 (Wk9): Interpreting Confidence](#lecture-24-102021-wk9-interpreting-confidence)
-    - [Subtitle #1](#subtitle-1-2)
+    - [Subtitle #1](#subtitle-1)
   - [Lecture 25, 10/22/21 (Wk9): Center and Spread](#lecture-25-102221-wk9-center-and-spread)
-    - [Subtitle #1](#subtitle-1-3)
+    - [Subtitle #1](#subtitle-1-1)
   - [Lecture 26, 10/25/21 (Wk10): The Normal Distribution](#lecture-26-102521-wk10-the-normal-distribution)
-    - [Subtitle #1](#subtitle-1-4)
+    - [Subtitle #1](#subtitle-1-2)
   - [Lecture 27, 10/27/21 (Wk10): Sample Means](#lecture-27-102721-wk10-sample-means)
-    - [Subtitle #1](#subtitle-1-5)
+    - [Subtitle #1](#subtitle-1-3)
   - [Lecture 28, 10/29/21 (Wk10): Designing Experiments](#lecture-28-102921-wk10-designing-experiments)
-    - [Subtitle #1](#subtitle-1-6)
+    - [Subtitle #1](#subtitle-1-4)
   - [Lecture 29, 11/01/21 (Wk11): Correlation](#lecture-29-110121-wk11-correlation)
-    - [Subtitle #1](#subtitle-1-7)
+    - [Subtitle #1](#subtitle-1-5)
   - [Lecture 30, 11/03/21 (Wk11): Linear Regression (and it's my birthday!)](#lecture-30-110321-wk11-linear-regression-and-its-my-birthday)
-    - [Subtitle #1](#subtitle-1-8)
+    - [Subtitle #1](#subtitle-1-6)
   - [Lecture 31, 11/05/21 (Wk11): Least Squares](#lecture-31-110521-wk11-least-squares)
-    - [Subtitle #1](#subtitle-1-9)
+    - [Subtitle #1](#subtitle-1-7)
   - [Lecture 32, 11/08/21 (Wk12): Residuals](#lecture-32-110821-wk12-residuals)
-    - [Subtitle #1](#subtitle-1-10)
+    - [Subtitle #1](#subtitle-1-8)
   - [Lecture 33, 11/10/21 (Wk12): Regression Inference](#lecture-33-111021-wk12-regression-inference)
-    - [Subtitle #1](#subtitle-1-11)
+    - [Subtitle #1](#subtitle-1-9)
   - [Lecture 34, 11/12/21 (Wk12): Privacy](#lecture-34-111221-wk12-privacy)
-    - [Subtitle #1](#subtitle-1-12)
+    - [Subtitle #1](#subtitle-1-10)
   - [Lecture 35, 11/15/21 (Wk13): Classification](#lecture-35-111521-wk13-classification)
-    - [Subtitle #1](#subtitle-1-13)
+    - [Subtitle #1](#subtitle-1-11)
   - [Lecture 36, 11/17/21 (Wk13): Classifiers](#lecture-36-111721-wk13-classifiers)
-    - [Subtitle #1](#subtitle-1-14)
+    - [Subtitle #1](#subtitle-1-12)
   - [Lecture 37, 11/19/21 (Wk13): Decisions](#lecture-37-111921-wk13-decisions)
-    - [Subtitle #1](#subtitle-1-15)
+    - [Subtitle #1](#subtitle-1-13)
   - [Lecture 38, 11/22/21 (Wk14): TBA](#lecture-38-112221-wk14-tba)
-    - [Subtitle #1](#subtitle-1-16)
+    - [Subtitle #1](#subtitle-1-14)
   - [Lecture 39, 11/29/21 (Wk15): TBA](#lecture-39-112921-wk15-tba)
-    - [Subtitle #1](#subtitle-1-17)
+    - [Subtitle #1](#subtitle-1-15)
   - [Lecture 40, 12/03/21 (Wk15): Conclusion](#lecture-40-120321-wk15-conclusion)
-    - [Subtitle #1](#subtitle-1-18)
+    - [Subtitle #1](#subtitle-1-16)
 
 
 ## Lecture 1, 08/25/21 (Wk1): Introduction
@@ -1118,15 +1125,93 @@ Try and construct a *null hypothesis*, *alternative hypothesis*, *test statistic
 
 ## Lecture 22, 10/03/21 (Wk8): Midterm Review
 
-### Subtitle #1
+### Midterm Review Lecture Slides
   
--
+Check out the slides [here](https://docs.google.com/presentation/d/1N52a9TKZJFEBKQlMNNQRexZGKl91DOb5Hf4i5Se79TY/edit).
 
-## Lecture 23, 10/18/21 (Wk9): Confidence Intervals
+## Lecture 23, 10/18/21 (Wk9): Estimation, Percentiles, & Bootstrap
 
-### Subtitle #1
+### Estimation & Percentile
+
+- A **parameter** is a number that is calculated based on the proportion
+- To figure out the value of a parameter, we need data; if we have the relevant data for the entire population, we can calculate the parameter
+- On the topic of *rank:*
+  - Values of a numerical data set have a *rank order*
+  - A **percentile** is the value at a particular rank
+
+### Contextualizing "Percentile"
+
+Intuitively, we know that **percentile** relates to the percentage of some data. In stricter terms, we know that any `ith` percentile is the smallest value in a sample of the population that is at least as large as `i` percent of the sample. The `ith` percentile has `i` percent of values less than or equal to it; `i` is the smallest value in the data for which this statement is true.
+
+### The `percentile` Function
   
--
+- The `pth` percentile of a set of numbers is the smallest value in the set that is **at least as large as `p%`** of the elements in the set
+- Function in the `datascience` module:
+  - Takes in a rank between 0 and 100 and an array
+  - `percentile(p, values_array)`
+  - Evaluates to the pth percentile of the array
+- The percentile function cannot return any integer with decimals unless there is an integer with decimals in the list; it can only return numbers in the list
+- The 80th percentile of a list `[1, 7, 3, 9, 5]` is ordered element 4: `(80/100) * 5`
+
+**Out of Context Example**:
+
+```py
+# Median total compensation in a population
+pop_median = percentile(50, sf.column("Total Compensation))
+pop_median
+135747.0
+```
+
+For more on using the percentile function, check out [Chapter 13.1.Percentiles](https://inferentialthinking.com/chapters/13/1/Percentiles.html).
+
+### Variability of the estimate
+
+- One sample -> one estimate...
+- But the random sample could have come out differently
+- Therefore, the estimate could have been different
+
+### Where to Get Another Sample?
+
+- We want to understand variability of our estimate
+- Given the **population**, we could simulate
+  - ...but we only have the **sample**!
+
+### Bootstrapping!
+
+- A technique for generating new samples from old samples
+- We have the original sample, and it probably resembles the population
+- So let's draw from our sample instead of the population again
+
+In summary, we gtreat the original sample as a **stand-in** for the population! The process is as follows:
+
+- We have: 
+  - population, our sample
+- Process:
+  1) Take sample from population 
+  2) Sample from (1)
+  3) Repeat (2) as many times as needed!
+
+Resampling from the original sample is like sampling from the population with *high probability*. It doesn't always hold, but it's reasonable to assume that we can use it if the original sample is alrge enough
+
+### Key to Resampling
+
+- From the original sample,
+  - draw at random
+  - *with replacement*
+  - and as many values as the original sample contained
+
+- The size of the new sample has to be the same as the original one so that the two estimates are comparable
+
+### Example: Taking a Bootstrap Sample
+
+```
+# Take a bootstrap sample
+bootstrap_sample = out_sample.sample()
+
+# Boostrap Sample Median
+percentile(50, bootstrap_sample.column('Column Name'))
+```
+
 
 ## Lecture 24, 10/20/21 (Wk9): Interpreting Confidence
 
