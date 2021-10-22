@@ -134,37 +134,42 @@
   - [Lecture 24, 10/20/21 (Wk9): Interpreting Confidence](#lecture-24-102021-wk9-interpreting-confidence)
     - [Example](#example)
   - [Lecture 25, 10/22/21 (Wk9): Center and Spread](#lecture-25-102221-wk9-center-and-spread)
-    - [Subtitle #1](#subtitle-1)
+    - [Center (The Average/Mean)](#center-the-averagemean)
+    - [Median vs. Mean](#median-vs-mean)
+    - [How Far from the Average?](#how-far-from-the-average)
+    - [how Big are Most of the Values?](#how-big-are-most-of-the-values)
+    - [Chebyshev’s Bounds](#chebyshevs-bounds)
+    - [Standard Units](#standard-units)
   - [Lecture 26, 10/25/21 (Wk10): The Normal Distribution](#lecture-26-102521-wk10-the-normal-distribution)
-    - [Subtitle #1](#subtitle-1-1)
+    - [Subtitle #1](#subtitle-1)
   - [Lecture 27, 10/27/21 (Wk10): Sample Means](#lecture-27-102721-wk10-sample-means)
-    - [Subtitle #1](#subtitle-1-2)
+    - [Subtitle #1](#subtitle-1-1)
   - [Lecture 28, 10/29/21 (Wk10): Designing Experiments](#lecture-28-102921-wk10-designing-experiments)
-    - [Subtitle #1](#subtitle-1-3)
+    - [Subtitle #1](#subtitle-1-2)
   - [Lecture 29, 11/01/21 (Wk11): Correlation](#lecture-29-110121-wk11-correlation)
-    - [Subtitle #1](#subtitle-1-4)
+    - [Subtitle #1](#subtitle-1-3)
   - [Lecture 30, 11/03/21 (Wk11): Linear Regression (and it's my birthday!)](#lecture-30-110321-wk11-linear-regression-and-its-my-birthday)
-    - [Subtitle #1](#subtitle-1-5)
+    - [Subtitle #1](#subtitle-1-4)
   - [Lecture 31, 11/05/21 (Wk11): Least Squares](#lecture-31-110521-wk11-least-squares)
-    - [Subtitle #1](#subtitle-1-6)
+    - [Subtitle #1](#subtitle-1-5)
   - [Lecture 32, 11/08/21 (Wk12): Residuals](#lecture-32-110821-wk12-residuals)
-    - [Subtitle #1](#subtitle-1-7)
+    - [Subtitle #1](#subtitle-1-6)
   - [Lecture 33, 11/10/21 (Wk12): Regression Inference](#lecture-33-111021-wk12-regression-inference)
-    - [Subtitle #1](#subtitle-1-8)
+    - [Subtitle #1](#subtitle-1-7)
   - [Lecture 34, 11/12/21 (Wk12): Privacy](#lecture-34-111221-wk12-privacy)
-    - [Subtitle #1](#subtitle-1-9)
+    - [Subtitle #1](#subtitle-1-8)
   - [Lecture 35, 11/15/21 (Wk13): Classification](#lecture-35-111521-wk13-classification)
-    - [Subtitle #1](#subtitle-1-10)
+    - [Subtitle #1](#subtitle-1-9)
   - [Lecture 36, 11/17/21 (Wk13): Classifiers](#lecture-36-111721-wk13-classifiers)
-    - [Subtitle #1](#subtitle-1-11)
+    - [Subtitle #1](#subtitle-1-10)
   - [Lecture 37, 11/19/21 (Wk13): Decisions](#lecture-37-111921-wk13-decisions)
-    - [Subtitle #1](#subtitle-1-12)
+    - [Subtitle #1](#subtitle-1-11)
   - [Lecture 38, 11/22/21 (Wk14): TBA](#lecture-38-112221-wk14-tba)
-    - [Subtitle #1](#subtitle-1-13)
+    - [Subtitle #1](#subtitle-1-12)
   - [Lecture 39, 11/29/21 (Wk15): TBA](#lecture-39-112921-wk15-tba)
-    - [Subtitle #1](#subtitle-1-14)
+    - [Subtitle #1](#subtitle-1-13)
   - [Lecture 40, 12/03/21 (Wk15): Conclusion](#lecture-40-120321-wk15-conclusion)
-    - [Subtitle #1](#subtitle-1-15)
+    - [Subtitle #1](#subtitle-1-14)
 
 
 ## Lecture 1, 08/25/21 (Wk1): Introduction
@@ -1229,9 +1234,96 @@ percentile(50, bootstrap_sample.column('Column Name'))
 
 ## Lecture 25, 10/22/21 (Wk9): Center and Spread
 
-### Subtitle #1
+### Center (The Average/Mean)
   
--
+The **average/mean** is a measure of center.
+
+**Data:** 2, 3, 3, 9
+**Average** = (2+3+3+9)/4 = 4.25
+
+- The average need not be a value in the data
+- Need not be a whole number; must not rounnd it!
+- It's somewhere in the middle but it doesn't have to be halfway in between
+- Same units as the data
+
+### Median vs. Mean
+
+**Median:** 50th percentile of the data
+
+**Mean:** balance point of the histogram
+- *Physics analogy:* center of gravity
+
+### How Far from the Average?
+
+- **Standard deviation (SD)** measures roughly how far the data are from their average
+
+- `SD = Root Mean Square of Deviations from Average`
+  - Also known as the RMS
+
+- SD has the same units as the data
+
+### how Big are Most of the Values?
+
+- No matter what the shape of the distribution, the bulk of the data are in the range "average +- a few SDs"
+
+**Chebyshev's Inequality:** no matter the shape of the distribution, the proportion of values in the range "mean +- z SDs" is at least 1 - 1/z^2
+
+### Chebyshev’s Bounds
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
+.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
+.tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-7btt"><span style="font-weight:700;font-style:normal;text-decoration:none;color:white;background-color:transparent">Range</span></th>
+    <th class="tg-7btt"><span style="font-weight:700;font-style:normal;text-decoration:none;color:white;background-color:transparent">Proportion</span></th>
+    <th class="tg-uzvj" style="color: white">Points</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-fymr"><span style="font-weight:400;font-style:normal;text-decoration:none;color:white;background-color:transparent">average ± 2 SDs</span></td>
+    <td class="tg-fymr"><span style="font-weight:400;font-style:normal;text-decoration:none;color:white;background-color:transparent">at least 1 - 1/4 = 3/4    (75%)</span></td>
+    <td class="tg-lboi" style="color:white">20</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky"><span style="font-weight:400;font-style:normal;text-decoration:none;color:white;background-color:transparent">average ± 3 SDs</span></td>
+    <td class="tg-0pky"><span style="font-weight:400;font-style:normal;text-decoration:none;color:white;background-color:transparent">at least 1 - 1/9 = 8/9   (88.88…%)</span></td>
+    <td class="tg-lboi" style="color:white">100</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky"><span style="font-weight:400;font-style:normal;text-decoration:none;color:white;background-color:transparent">average ± 4 SDs</span></td>
+    <td class="tg-0pky"><span style="font-weight:400;font-style:normal;text-decoration:none;color:white;background-color:transparent">at least 1 - 1/16 = 15/16 (93.75%)</span></td>
+    <td class="tg-lboi" style="color:white">34</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky"><span style="font-weight:400;font-style:normal;text-decoration:none;color:white;background-color:transparent">average ± 5 SDs</span></td>
+    <td class="tg-0pky"><span style="font-weight:400;font-style:normal;text-decoration:none;color:white;background-color:transparent">at least 1 - 1/25 = 24/25  (96%)</span></td>
+    <td class="tg-lboi" style="color:white">46</td>
+  </tr>
+</tbody>
+</table>
+
+### Standard Units
+
+```
+Mean + 2SD = 2 standard units
+Mean + SD = 1 standard units
+Mean = 0 standard units
+Mean - SD = -1 standard units
+Mean - 2SD = -2 standard units
+```
+
 
 ## Lecture 26, 10/25/21 (Wk10): The Normal Distribution
 
