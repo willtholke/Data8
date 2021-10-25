@@ -141,35 +141,37 @@
     - [Chebyshev’s Bounds](#chebyshevs-bounds)
     - [Standard Units](#standard-units)
   - [Lecture 26, 10/25/21 (Wk10): The Normal Distribution](#lecture-26-102521-wk10-the-normal-distribution)
-    - [Subtitle #1](#subtitle-1)
+    - [Associated Reading](#associated-reading)
+    - [The SD and the Histogram](#the-sd-and-the-histogram)
+    - [Central Limit Theorem](#central-limit-theorem)
   - [Lecture 27, 10/27/21 (Wk10): Sample Means](#lecture-27-102721-wk10-sample-means)
-    - [Subtitle #1](#subtitle-1-1)
+    - [Subtitle #1](#subtitle-1)
   - [Lecture 28, 10/29/21 (Wk10): Designing Experiments](#lecture-28-102921-wk10-designing-experiments)
-    - [Subtitle #1](#subtitle-1-2)
+    - [Subtitle #1](#subtitle-1-1)
   - [Lecture 29, 11/01/21 (Wk11): Correlation](#lecture-29-110121-wk11-correlation)
-    - [Subtitle #1](#subtitle-1-3)
+    - [Subtitle #1](#subtitle-1-2)
   - [Lecture 30, 11/03/21 (Wk11): Linear Regression (and it's my birthday!)](#lecture-30-110321-wk11-linear-regression-and-its-my-birthday)
-    - [Subtitle #1](#subtitle-1-4)
+    - [Subtitle #1](#subtitle-1-3)
   - [Lecture 31, 11/05/21 (Wk11): Least Squares](#lecture-31-110521-wk11-least-squares)
-    - [Subtitle #1](#subtitle-1-5)
+    - [Subtitle #1](#subtitle-1-4)
   - [Lecture 32, 11/08/21 (Wk12): Residuals](#lecture-32-110821-wk12-residuals)
-    - [Subtitle #1](#subtitle-1-6)
+    - [Subtitle #1](#subtitle-1-5)
   - [Lecture 33, 11/10/21 (Wk12): Regression Inference](#lecture-33-111021-wk12-regression-inference)
-    - [Subtitle #1](#subtitle-1-7)
+    - [Subtitle #1](#subtitle-1-6)
   - [Lecture 34, 11/12/21 (Wk12): Privacy](#lecture-34-111221-wk12-privacy)
-    - [Subtitle #1](#subtitle-1-8)
+    - [Subtitle #1](#subtitle-1-7)
   - [Lecture 35, 11/15/21 (Wk13): Classification](#lecture-35-111521-wk13-classification)
-    - [Subtitle #1](#subtitle-1-9)
+    - [Subtitle #1](#subtitle-1-8)
   - [Lecture 36, 11/17/21 (Wk13): Classifiers](#lecture-36-111721-wk13-classifiers)
-    - [Subtitle #1](#subtitle-1-10)
+    - [Subtitle #1](#subtitle-1-9)
   - [Lecture 37, 11/19/21 (Wk13): Decisions](#lecture-37-111921-wk13-decisions)
-    - [Subtitle #1](#subtitle-1-11)
+    - [Subtitle #1](#subtitle-1-10)
   - [Lecture 38, 11/22/21 (Wk14): TBA](#lecture-38-112221-wk14-tba)
-    - [Subtitle #1](#subtitle-1-12)
+    - [Subtitle #1](#subtitle-1-11)
   - [Lecture 39, 11/29/21 (Wk15): TBA](#lecture-39-112921-wk15-tba)
-    - [Subtitle #1](#subtitle-1-13)
+    - [Subtitle #1](#subtitle-1-12)
   - [Lecture 40, 12/03/21 (Wk15): Conclusion](#lecture-40-120321-wk15-conclusion)
-    - [Subtitle #1](#subtitle-1-14)
+    - [Subtitle #1](#subtitle-1-13)
 
 
 ## Lecture 1, 08/25/21 (Wk1): Introduction
@@ -1316,6 +1318,8 @@ The **average/mean** is a measure of center.
 
 ### Standard Units
 
+**Z-score:** `z = (value - average) / SD`
+
 ```
 Mean + 2SD = 2 standard units
 Mean + SD = 1 standard units
@@ -1324,12 +1328,30 @@ Mean - SD = -1 standard units
 Mean - 2SD = -2 standard units
 ```
 
-
 ## Lecture 26, 10/25/21 (Wk10): The Normal Distribution
 
-### Subtitle #1
+### Associated Reading
+
+- [14.3: The SD and the Normal Curve](https://inferentialthinking.com/chapters/14/3/SD_and_the_Normal_Curve.html)
+- [14.4: The Central Limit Theorem](https://inferentialthinking.com/chapters/14/4/Central_Limit_Theorem.html_)
+
+### The SD and the Histogram
   
--
+- Usually, it's nto easy to estimate the SD by looking at a histogram, but if the histagram has a bell shape, then you can!
+- If the histogram has a bell shape:
+  - The average is at the center
+  - The SD is the distance between the avreage and the points of inflection on either side
+
+### Central Limit Theorem
+
+- The **Central Limit Theorem** describes how the normal distribution (a bell-shaped curve) is connected to random sample averages.
+- We care about sample averages because they estimate population averages.
+
+If the sample is...
+- large
+- drawn at random with repalcement
+
+... then, regardless of the distribution of the population, **the probability distribution of the sample average is roughly normal.**
 
 ## Lecture 27, 10/27/21 (Wk10): Sample Means
 
