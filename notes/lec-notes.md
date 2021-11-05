@@ -145,33 +145,56 @@
     - [The SD and the Histogram](#the-sd-and-the-histogram)
     - [Central Limit Theorem](#central-limit-theorem)
   - [Lecture 27, 10/27/21 (Wk10): Sample Means](#lecture-27-102721-wk10-sample-means)
-    - [Subtitle #1](#subtitle-1)
+    - [Associated Reading](#associated-reading-1)
+    - [More on The Central Limit Theorem](#more-on-the-central-limit-theorem)
+    - [How Accurate is the Sample Mean?](#how-accurate-is-the-sample-mean)
+    - [The Square Root Law](#the-square-root-law)
   - [Lecture 28, 10/29/21 (Wk10): Designing Experiments](#lecture-28-102921-wk10-designing-experiments)
-    - [Subtitle #1](#subtitle-1-1)
+    - [Associated Reading](#associated-reading-2)
+    - [The Big Question](#the-big-question)
+    - [Example](#example-1)
   - [Lecture 29, 11/01/21 (Wk11): Correlation](#lecture-29-110121-wk11-correlation)
-    - [Subtitle #1](#subtitle-1-2)
-  - [Lecture 30, 11/03/21 (Wk11): Linear Regression (and it's my birthday!)](#lecture-30-110321-wk11-linear-regression-and-its-my-birthday)
-    - [Subtitle #1](#subtitle-1-3)
+    - [Associated Reading](#associated-reading-3)
+    - [Margin of Error](#margin-of-error)
+    - [Associations](#associations)
+    - [Convert to Standard Units](#convert-to-standard-units)
+    - [The Correlation Coefficient](#the-correlation-coefficient)
+    - [Calculating *r*](#calculating-r)
+    - [Properties of *r*](#properties-of-r)
+    - [The `correlation` function](#the-correlation-function)
+    - [Final words on correlation](#final-words-on-correlation)
+  - [Lecture 30, 11/03/21 (Wk11): Linear Regression (and it's my 21st birthday!)](#lecture-30-110321-wk11-linear-regression-and-its-my-21st-birthday)
+    - [Associated Reading](#associated-reading-4)
+    - [Why is *r* helpful?](#why-is-r-helpful)
+    - [Measuring in Standard Units](#measuring-in-standard-units)
+    - [Interpretations of a Graph](#interpretations-of-a-graph)
+    - [The Regression Line](#the-regression-line)
+    - [The Regression Effect](#the-regression-effect)
+    - [The Equation of the Regression Line](#the-equation-of-the-regression-line)
+    - [Fitted Values](#fitted-values)
   - [Lecture 31, 11/05/21 (Wk11): Least Squares](#lecture-31-110521-wk11-least-squares)
-    - [Subtitle #1](#subtitle-1-4)
+    - [What's a Line even for?](#whats-a-line-even-for)
+    - [Root Mean Squared Error](#root-mean-squared-error)
+    - [What's So Special About the Regression Line?](#whats-so-special-about-the-regression-line)
+    - [Nonlinear Regression](#nonlinear-regression)
   - [Lecture 32, 11/08/21 (Wk12): Residuals](#lecture-32-110821-wk12-residuals)
-    - [Subtitle #1](#subtitle-1-5)
+    - [Subtitle #1](#subtitle-1)
   - [Lecture 33, 11/10/21 (Wk12): Regression Inference](#lecture-33-111021-wk12-regression-inference)
-    - [Subtitle #1](#subtitle-1-6)
+    - [Subtitle #1](#subtitle-1-1)
   - [Lecture 34, 11/12/21 (Wk12): Privacy](#lecture-34-111221-wk12-privacy)
-    - [Subtitle #1](#subtitle-1-7)
+    - [Subtitle #1](#subtitle-1-2)
   - [Lecture 35, 11/15/21 (Wk13): Classification](#lecture-35-111521-wk13-classification)
-    - [Subtitle #1](#subtitle-1-8)
+    - [Subtitle #1](#subtitle-1-3)
   - [Lecture 36, 11/17/21 (Wk13): Classifiers](#lecture-36-111721-wk13-classifiers)
-    - [Subtitle #1](#subtitle-1-9)
+    - [Subtitle #1](#subtitle-1-4)
   - [Lecture 37, 11/19/21 (Wk13): Decisions](#lecture-37-111921-wk13-decisions)
-    - [Subtitle #1](#subtitle-1-10)
+    - [Subtitle #1](#subtitle-1-5)
   - [Lecture 38, 11/22/21 (Wk14): TBA](#lecture-38-112221-wk14-tba)
-    - [Subtitle #1](#subtitle-1-11)
+    - [Subtitle #1](#subtitle-1-6)
   - [Lecture 39, 11/29/21 (Wk15): TBA](#lecture-39-112921-wk15-tba)
-    - [Subtitle #1](#subtitle-1-12)
+    - [Subtitle #1](#subtitle-1-7)
   - [Lecture 40, 12/03/21 (Wk15): Conclusion](#lecture-40-120321-wk15-conclusion)
-    - [Subtitle #1](#subtitle-1-13)
+    - [Subtitle #1](#subtitle-1-8)
 
 
 ## Lecture 1, 08/25/21 (Wk1): Introduction
@@ -1355,36 +1378,269 @@ If the sample is...
 
 ## Lecture 27, 10/27/21 (Wk10): Sample Means
 
-### Subtitle #1
+### Associated Reading
+
+- [Chapter 14.5: The Variability of the Sample Mean](https://inferentialthinking.com/chapters/14/5/Variability_of_the_Sample_Mean.html#the-central-limit-theorem-for-the-sample-mean)
   
--
+### More on The Central Limit Theorem
+
+**TLDR:** probability distribution of the mean of a large random sample is roughly normal.
+
+If you were to draw a large random sample *with replacement* from a population, then, regardless of the distribution of the population, the probabiity distribution of the sample mean is going to look just about normal, centered at the population mean, with:
+
+```
+SD = population SD / sqrt(sample size)
+```
+
+### How Accurate is the Sample Mean?
+
+In short, the smaller the SD, the more accurate the estimate of the sample mean as an estimate of the population mean
+
+**Why is this?** The population SD is a constant, so variability of the sample mean *decreases* as the sample mean increases
+
+### The Square Root Law
+
+In general, when you multiply the sample size by a factor, the accuracy of the sample mean goes up by the square root of that factor, as shown in the plot below:
+
+<img src="images/../../images/lec-28-0.png">
 
 ## Lecture 28, 10/29/21 (Wk10): Designing Experiments
 
-### Subtitle #1
+### Associated Reading
+
+- [Chapter 14.6:Choosing a Sample Size](https://inferentialthinking.com/chapters/14/6/Choosing_a_Sample_Size.html)
+
+### The Big Question
   
--
+In a study with a simple random sample of the population, how do researchers decide how large their sample should be to get a desired level of accuracy?
+
+### Example
+
+**The end goal:** Some organization wants to make an estimate by constructing an approximate 95% confidence interval for some statistic. The desired level of accuracy is that the width of the interval should be no more than 1%
+
+**The caveat:** If we had a random sample, we could go about using the bootstrap to construct a confidence interval for the statistic, but we don't have a sample yet
+
+**How wide would the interval be?** For normally distributed variables, the interval "center +- 2 SDs" contains 95% of the data, meaning that the confidence interval will stretch 2 SDs of the sample proportion on either side of the center (the width will be 4 SDs of the sample proportion)
+
+**In the equation below...**
+
+- 4 is the *width of the confidence interval*
+- 0.01 is the *width we are willing to tolerate* (1%, so 0.01)
+- "SD of the 0-1 population" is at most 0.5 (not shown below), which is when 50% of the population is coded 1 and the other 50% are coded 0
+- raising both sides of the equation to the power of two will give us our *sample size*
+
+<img src="images/../../images/lec-28-1.png">
+
+For more information on what "0-1 population" refers to, check out the assocaited reading for lecture 28.
 
 ## Lecture 29, 11/01/21 (Wk11): Correlation
 
-### Subtitle #1
-  
--
+### Associated Reading
 
-## Lecture 30, 11/03/21 (Wk11): Linear Regression (and it's my birthday!)
+- [Chapter 15: Prediction](https://inferentialthinking.com/chapters/15/Prediction.html)
+- [Chapter 15.1: Correlation](https://inferentialthinking.com/chapters/15/1/Correlation.html)
 
-### Subtitle #1
+### Margin of Error
+
+The **margin of error** is the distance from the center to an end, is half the width of the interval, and is 2 * SD of sample proportion
+
+### Associations
+
+**Linear association** is a measure of how tightly clustered a scatter diagram is about a straight line
+
+We can think of a **positive association** as having a positive, uptrending slope and a **negative association** as having a negative, downtrending slope; this does not necessarily mean that there needs to be a linear relation between the variables on the x- and y-axes.
+
+### Convert to Standard Units
+
+```py
+def standard_units(any_numbers):
+    """ Convert any array of numbers to standard units. """
+    return (any_numbers - np.mean(any_numbers))/np.std(any_numbers)  
+```
+
+### The Correlation Coefficient
+
+The **correlation coefficient** (*r*) measures* the strength of the linear relationship between two variables (how clustered the scatter diagram is around a straight line)
+
+**Mathmematical Facts about *r*:**
+
+- *r* is a number between -1 and 1
+- *r* measures the extent to which the scatter plot clusters around a straight line
+- *r* = 1 if the scatter diagram is a perfect straight line sloping upwards, and *r* = -1 if the scatter diagram is a perfect straight line sloping downwards
+
+**Examples:**
+
+<img src="images/../../images/lec-29-0.png">
+
+<img src="images/../../images/lec-29-1.png">
+
+<img src="images/../../images/lec-29-2.png">
+
+<img src="images/../../images/lec-29-3.png">
+
+### Calculating *r*
+
+*r* is the average of the products of the two variables, when both variables are measured in standard units.
+
+1) Convert each variable to standard units
+    ```java
+    t_su = t.with_columns(
+            'x (standard units)', standard_units(x),
+            'y (standard units)', standard_units(y)
+        )
+    ```
+2) Multiply each pair of standard units
+  ```java
+  t_product = t_su.with_column('product of standard units', t_su.column(2) * t_su.column(3))
+  ```
+3) Calculate the average of the products computed in Step 2
+  ```java
+  r = np.mean(t_product.column(4))
+  r
+  ```
+
+### Properties of *r*
+
+- *r* is a pure number and has no units because it's based on standard units. For this same reason, *r* is unaffected by changing the units on either axes
+- *r* is unaffected by switching the axes because the product of standard units does not depend on which variable is called `x` and which `y`; switching the axis only reflects the scatter plot about the line `y = x`
+
+### The `correlation` function
+
+The function `correlation` takes in a table and the labels of two columns in the table. The function returns *r*, the mean of the products of those column values in standard units.
+
+```py
+def correlation(t, x, y):
+    return np.mean(standard_units(t.column(x))*standard_units(t.column(y)))
+```
+
+### Final words on correlation
+
+- **Correlation only measures association**. It does not imply causation. 
+- Correlation measures only one kind of association – *linear*. Variables that have a strong non-linear association might have very low correlation.
+- *Outliers* can have a big effect on correlation
+- We should be careful with correlations based on aggregates (*ecological correlations*)
+
+## Lecture 30, 11/03/21 (Wk11): Linear Regression (and it's my 21st birthday!)
+
+### Associated Reading
+
+- [Chapter 15.2: The Regression Line](https://inferentialthinking.com/chapters/15/2/Regression_Line.html)
   
--
+### Why is *r* helpful?
+
+*r* not only measures how clustered the points in a scatter plot are about a straight line; they also help us identify the straight line about which those points are clustered!
+
+### Measuring in Standard Units
+
+Since the linear association doesn't depend on the units of measurement, we might as well convert the variables to standard units.
+
+```py
+def standard_units(xyz):
+    "Convert any array of numbers to standard units."
+    return (xyz - np.mean(xyz))/np.std(xyz)  
+```
+
+### Interpretations of a Graph
+
+**In the graph below...**
+
+- The red line is the 45° line 
+- The green line is the "graph of averages," whose slope is `r` (the regression line)
+
+<img src="images/../../images/lec-30-0.png">
+
+### The Regression Line
+
+**TLDR:** inregression equation gives pretty good predictions when the scatter plot is football shaped
+
+To simulate some football shaped scatter plots with different values of *r*, use the function `regression_line(r)`. The examples below illustrate that, when is r is close to 1, the 45 degree line, scatter plot, *and* the regression line are all very close to each other. For more moderate values of `r`, the regression line is noticably flatter.
+ 
+**Examples:**
+
+<img src="images/../../images/lec-30-1.png">
+
+<img src="images/../../images/lec-30-2.png">
+
+### The Regression Effect
+
+The *regression effect* states that, in general, individuals who are away from average on one variable are expected to be not quite as far away from average on the other variable.
+
+### The Equation of the Regression Line
+
+- Variable *x* is used to predict the value of another variable *y*
+- When *x* and *y* are measured in SI, the regression line for predicting *y* based on *x* has slope *r* and passes through the origin
+  - `estimate of y = r * x` iff both variables are measured in SI
+
+In the original units of data, the above calculation becomes:
+```
+(estimate of y - average of y) / SD of y =
+(the given x - average of x) / SD of x
+```
+
+**Slope of the regression line:** `r * (SD of y)/(SD of x)`
+
+**Intercept of the regression line:** `average of y - (slope * average of x)`
+
+**Below are the functions for computing the correlation, slope, and intercept + a visualization:**
+
+```py
+def correlation(t, label_x, label_y):
+    return np.mean(standard_units(t.column(label_x))*standard_units(t.column(label_y)))
+
+def slope(t, label_x, label_y):
+    r = correlation(t, label_x, label_y)
+    return r*np.std(t.column(label_y))/np.std(t.column(label_x))
+
+def intercept(t, label_x, label_y):
+    return np.mean(t.column(label_y)) - slope(t, label_x, label_y)*np.mean(t.column(label_x))
+```
+
+<img src="images/../../images/lec-30-3.png">
+
+### Fitted Values
+
+All predictions that lie on a regression line are called the "fitted values."
 
 ## Lecture 31, 11/05/21 (Wk11): Least Squares
 
-### Subtitle #1
-  
--
+- [Chapter 15.3: The Method of Least Squares](https://inferentialthinking.com/chapters/15/3/Method_of_Least_Squares.html)
+- [Chapter 15.4: Least Squares Regression](https://inferentialthinking.com/chapters/15/4/Least_Squares_Regression.html)
+
+### What's a Line even for?
+
+The purpose of a line is to *predict* or estimate values of `y` given values of `x`. We know that estimates aren't perfect and that each one is off the true value by some *error*. 
+
+**A line which is the "best" has the smallest possible overall error among all straight lines.**
+
+### Root Mean Squared Error
+
+What we need now is one overall measure of the rough size of all the errors between the line and the points on the plot, measured on the y-axis.
+
+The **mean squared error** of estimation is a measure of roughly how big the square errors are.
+
+**Why do we take the square root?** Taking the square root yields the **root mean square error** (*rsme*), which is in th esame units as the variable being predicted (so it's easier to understand).
+
+Going back to our explanation of **best**, we can now say that a line which is the "best" has the smallest possible *RSME*.
+
+The RSME is much smaller if we choose a slope and intercept close to those of the regression line.
+
+### What's So Special About the Regression Line?
+
+The regression line is the *unique (the only)* straight line that minimizes the MSE of estimation.
+
+### Nonlinear Regression
+
+For scatter plots that are a bit curved, we'd want to fit a curve rather than a straight line.
+
+A quadratic function has the form `f(x) = ax^2 + bx + c` for constants `a`, `b`, & `c`. 
+
+In order to calculate the fitted values by using the quadratic function, we can use Python! See Chapter 15.4 in the associated reading for an example.
+
+After we write the function taht returns the mean squared error, we can call `minimize()` on that function to find the constraints that minimize the MSE.
+
 
 ## Lecture 32, 11/08/21 (Wk12): Residuals
-
+  
 ### Subtitle #1
   
 -
