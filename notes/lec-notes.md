@@ -137,7 +137,7 @@
     - [Center (The Average/Mean)](#center-the-averagemean)
     - [Median vs. Mean](#median-vs-mean)
     - [How Far from the Average?](#how-far-from-the-average)
-    - [how Big are Most of the Values?](#how-big-are-most-of-the-values)
+    - [How Big are Most of the Values?](#how-big-are-most-of-the-values)
     - [Chebyshev’s Bounds](#chebyshevs-bounds)
     - [Standard Units](#standard-units)
   - [Lecture 26, 10/25/21 (Wk10): The Normal Distribution](#lecture-26-102521-wk10-the-normal-distribution)
@@ -178,23 +178,33 @@
     - [What's So Special About the Regression Line?](#whats-so-special-about-the-regression-line)
     - [Nonlinear Regression](#nonlinear-regression)
   - [Lecture 32, 11/08/21 (Wk12): Residuals](#lecture-32-110821-wk12-residuals)
-    - [Subtitle #1](#subtitle-1)
+    - [Associated Reading](#associated-reading-5)
+    - [Residuals](#residuals)
+    - [The `residual` Function](#the-residual-function)
+    - [Regression Diagnostics](#regression-diagnostics)
+    - [Detecting Nonlinearity](#detecting-nonlinearity)
+    - [Detecting Heteroscedasticity](#detecting-heteroscedasticity)
+    - [Trends of Residuals](#trends-of-residuals)
+    - [Average of Residuals](#average-of-residuals)
+    - [SD of the Residuals](#sd-of-the-residuals)
+    - [Another Way to Interpret *r*](#another-way-to-interpret-r)
   - [Lecture 33, 11/10/21 (Wk12): Regression Inference](#lecture-33-111021-wk12-regression-inference)
-    - [Subtitle #1](#subtitle-1-1)
+    - [Associated Reading](#associated-reading-6)
+    - [Subtitle #1](#subtitle-1)
   - [Lecture 34, 11/12/21 (Wk12): Privacy](#lecture-34-111221-wk12-privacy)
-    - [Subtitle #1](#subtitle-1-2)
+    - [Subtitle #1](#subtitle-1-1)
   - [Lecture 35, 11/15/21 (Wk13): Classification](#lecture-35-111521-wk13-classification)
-    - [Subtitle #1](#subtitle-1-3)
+    - [Subtitle #1](#subtitle-1-2)
   - [Lecture 36, 11/17/21 (Wk13): Classifiers](#lecture-36-111721-wk13-classifiers)
-    - [Subtitle #1](#subtitle-1-4)
+    - [Subtitle #1](#subtitle-1-3)
   - [Lecture 37, 11/19/21 (Wk13): Decisions](#lecture-37-111921-wk13-decisions)
-    - [Subtitle #1](#subtitle-1-5)
+    - [Subtitle #1](#subtitle-1-4)
   - [Lecture 38, 11/22/21 (Wk14): TBA](#lecture-38-112221-wk14-tba)
-    - [Subtitle #1](#subtitle-1-6)
+    - [Subtitle #1](#subtitle-1-5)
   - [Lecture 39, 11/29/21 (Wk15): TBA](#lecture-39-112921-wk15-tba)
-    - [Subtitle #1](#subtitle-1-7)
+    - [Subtitle #1](#subtitle-1-6)
   - [Lecture 40, 12/03/21 (Wk15): Conclusion](#lecture-40-120321-wk15-conclusion)
-    - [Subtitle #1](#subtitle-1-8)
+    - [Subtitle #1](#subtitle-1-7)
 
 
 ## Lecture 1, 08/25/21 (Wk1): Introduction
@@ -1287,7 +1297,7 @@ The **average/mean** is a measure of center.
 
 - SD has the same units as the data
 
-### how Big are Most of the Values?
+### How Big are Most of the Values?
 
 - No matter what the shape of the distribution, the bulk of the data are in the range "average +- a few SDs"
 
@@ -1295,18 +1305,6 @@ The **average/mean** is a measure of center.
 
 ### Chebyshev’s Bounds
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
-.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
-.tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
-.tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-</style>
 <table class="tg">
 <thead>
   <tr>
@@ -1460,7 +1458,7 @@ def standard_units(any_numbers):
 
 ### The Correlation Coefficient
 
-The **correlation coefficient** (*r*) measures* the strength of the linear relationship between two variables (how clustered the scatter diagram is around a straight line)
+The **correlation coefficient** (*r*) measures the strength of the linear relationship between two variables (how clustered the scatter diagram is around a straight line)
 
 **Mathmematical Facts about *r*:**
 
@@ -1641,11 +1639,80 @@ After we write the function taht returns the mean squared error, we can call `mi
 
 ## Lecture 32, 11/08/21 (Wk12): Residuals
   
-### Subtitle #1
-  
--
+### Associated Reading
+
+- [Chapter 15.5: Visual Diagnostics](https://inferentialthinking.com/chapters/15/5/Visual_Diagnostics.html)
+- [Chapter 15.6: Numerical Diagnostics](https://inferentialthinking.com/chapters/15/6/Numerical_Diagnostics.html)
+
+### Residuals
+
+**Residuals** are the differences that describe how far off estimates are from actual values; in other words, the residual is the residue of estimation.
+- `residual = observed value - regression estimate`
+
+**Residuals** are the vertical distances of points from the regression line, meaning that there is one resiual for each point in the scatter plot
+- `residual = y - fitted value of y = y - height of regression line at x`
+
+### The `residual` Function
+
+The `residual` function calculates the residuals
+
+```py
+def residual(tbl, x, y):
+  return tbl.column(y) - fit(tbl, x, y)
+```
+
+and uses the function `fit`
+
+```py
+def fit(table, x, y):
+    """Return the height of the regression line at each x value."""
+    a = slope(table, x, y)
+    b = intercept(table, x, y)
+    return a * table.column(x) + b
+```
+
+### Regression Diagnostics
+
+Residual plots help us make visual assessments of the quality of a linear regression analysis and are called **diagnostics**.
+
+The residual plot of a good regression shows no pattern. The residuals look about the same, above and below the horizontal line at 0, across the range of the predictor variable.**
+
+### Detecting Nonlinearity
+
+When a residual plot shows a pattern, there may be a non-linear relation between the variables.
+
+### Detecting Heteroscedasticity
+
+**Heteroscedasticity** means "uneven spread."
+
+If the residual plot shows uneven variation about the horizontal line at 0, the regression estimates are not equally accurate across the range of the predictor variable.
+
+### Trends of Residuals
+
+For every linear regression, whether good or bad, *the residual plot shows no trend*. Overall, **it is flat**. In other words, the residuals and the predictor variable are uncorrelated.
+
+### Average of Residuals
+
+No matter the shape of the scatter diagram, the average of the residuals is 0. That being said, if you take any list of numbers and calculate the list of deviations from average, the average of the deviations is 0.
+
+### SD of the Residuals
+
+The SD of the residuals is a fraction of the SD of the response variable. The fraction is `sqrt(1 - r^2)`.
+
+- `SD of residuals = sqrt(1 - r^2) * SD of y`
+
+The smaller the SD of the residuals is, the closer the rsiduals are to 0 (good). If the SD of the residuals is small, the overall size of the errors in the regression is small!
+
+### Another Way to Interpret *r*
+
+- `SD of fitted values / SD of y = |r|`
+- `variance = mean squared deviation from average = SD^2`
 
 ## Lecture 33, 11/10/21 (Wk12): Regression Inference
+
+### Associated Reading
+
+- [Chapter 16: Inference for Regression](https://inferentialthinking.com/chapters/16/Inference_for_Regression.html)
 
 ### Subtitle #1
   
