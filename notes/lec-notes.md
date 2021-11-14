@@ -197,19 +197,23 @@
     - [Bootstrap Prediction Interval](#bootstrap-prediction-interval)
     - [Assumptions](#assumptions)
   - [Lecture 34, 11/12/21 (Wk12): Privacy](#lecture-34-111221-wk12-privacy)
-    - [Subtitle #1](#subtitle-1)
+    - [N/A](#na)
   - [Lecture 35, 11/15/21 (Wk13): Classification](#lecture-35-111521-wk13-classification)
+    - [Associated Reading](#associated-reading-7)
+    - [Subtitle #1](#subtitle-1)
+  - [Lecture 36, 11/17/21 (Wk13): Classifiers I](#lecture-36-111721-wk13-classifiers-i)
+    - [Associated Reading](#associated-reading-8)
     - [Subtitle #1](#subtitle-1-1)
-  - [Lecture 36, 11/17/21 (Wk13): Classifiers](#lecture-36-111721-wk13-classifiers)
+  - [Lecture 37, 11/19/21 (Wk13): Classifiers II](#lecture-37-111921-wk13-classifiers-ii)
+    - [Associated Reading](#associated-reading-9)
     - [Subtitle #1](#subtitle-1-2)
-  - [Lecture 37, 11/19/21 (Wk13): Decisions](#lecture-37-111921-wk13-decisions)
+  - [Lecture 38, 11/22/21 (Wk14): Decisions](#lecture-38-112221-wk14-decisions)
+    - [Associated Reading](#associated-reading-10)
     - [Subtitle #1](#subtitle-1-3)
-  - [Lecture 38, 11/22/21 (Wk14): TBA](#lecture-38-112221-wk14-tba)
-    - [Subtitle #1](#subtitle-1-4)
   - [Lecture 39, 11/29/21 (Wk15): TBA](#lecture-39-112921-wk15-tba)
-    - [Subtitle #1](#subtitle-1-5)
+    - [Subtitle #1](#subtitle-1-4)
   - [Lecture 40, 12/03/21 (Wk15): Conclusion](#lecture-40-120321-wk15-conclusion)
-    - [Subtitle #1](#subtitle-1-6)
+    - [Subtitle #1](#subtitle-1-5)
 
 
 ## Lecture 1, 08/25/21 (Wk1): Introduction
@@ -1795,30 +1799,49 @@ The key takeaway is that **we must first decide whether the regression model hol
 
 ## Lecture 34, 11/12/21 (Wk12): Privacy
 
-### Subtitle #1
-  
--
+### N/A
+
+No notes taken.
 
 ## Lecture 35, 11/15/21 (Wk13): Classification
 
-### Subtitle #1
-  
--
+### Associated Reading
 
-## Lecture 36, 11/17/21 (Wk13): Classifiers
-
-### Subtitle #1
-  
--
-
-## Lecture 37, 11/19/21 (Wk13): Decisions
+- [Chapter 17: Classification](https://inferentialthinking.com/chapters/17/Classification.html)
+- [Chapter 17.1: Nearest Neighbors](https://inferentialthinking.com/chapters/17/1/Nearest_Neighbors.html)
+- [Chapter 17.2: Training and Testing](https://inferentialthinking.com/chapters/17/2/Training_and_Testing.html)
+- [Chapter 17.3: Rows of Tables](https://inferentialthinking.com/chapters/17/3/Rows_of_Tables.html)
 
 ### Subtitle #1
   
 -
 
-## Lecture 38, 11/22/21 (Wk14): TBA
+## Lecture 36, 11/17/21 (Wk13): Classifiers I
 
+### Associated Reading
+
+- [Chapter 17.4: Implementing the Classifier](https://inferentialthinking.com/chapters/17/4/Implementing_the_Classifier.html)
+
+### Subtitle #1
+  
+-
+
+## Lecture 37, 11/19/21 (Wk13): Classifiers II
+
+### Associated Reading
+
+- [Chapter 17.4: Implementing the Classifier](https://inferentialthinking.com/chapters/17/4/Implementing_the_Classifier.html)
+
+### Subtitle #1
+  
+-
+
+## Lecture 38, 11/22/21 (Wk14): Decisions
+
+### Associated Reading
+
+- [Chapter 18: Updating Predictions](https://inferentialthinking.com/chapters/18/Updating_Predictions.html)
+  
 ### Subtitle #1
   
 -
