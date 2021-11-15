@@ -220,17 +220,20 @@
       - [Question 2.1.5](#question-215)
   - [Lecture 36, 11/17/21 (Wk13): Classifiers I](#lecture-36-111721-wk13-classifiers-i)
     - [Associated Reading](#associated-reading-8)
-    - [Subtitle #1](#subtitle-1)
+    - [Classification w/ Multiple Attributes](#classification-w-multiple-attributes)
+    - [Predict Answer to Yes/No Question](#predict-answer-to-yesno-question)
+    - [Distance in 3-Dimensional Space](#distance-in-3-dimensional-space)
+    - [Implementation in Code](#implementation-in-code)
   - [Lecture 37, 11/19/21 (Wk13): Classifiers II](#lecture-37-111921-wk13-classifiers-ii)
     - [Associated Reading](#associated-reading-9)
-    - [Subtitle #1](#subtitle-1-1)
+    - [Subtitle #1](#subtitle-1)
   - [Lecture 38, 11/22/21 (Wk14): Decisions](#lecture-38-112221-wk14-decisions)
     - [Associated Reading](#associated-reading-10)
-    - [Subtitle #1](#subtitle-1-2)
+    - [Subtitle #1](#subtitle-1-1)
   - [Lecture 39, 11/29/21 (Wk15): TBA](#lecture-39-112921-wk15-tba)
-    - [Subtitle #1](#subtitle-1-3)
+    - [Subtitle #1](#subtitle-1-2)
   - [Lecture 40, 12/03/21 (Wk15): Conclusion](#lecture-40-120321-wk15-conclusion)
-    - [Subtitle #1](#subtitle-1-4)
+    - [Subtitle #1](#subtitle-1-3)
 
 
 ## Lecture 1, 08/25/21 (Wk1): Introduction
@@ -1926,9 +1929,33 @@ The default collection method of `.group` may be helpful here
 
 - [Chapter 17.4: Implementing the Classifier](https://inferentialthinking.com/chapters/17/4/Implementing_the_Classifier.html)
 
-### Subtitle #1
-  
+### Classification w/ Multiple Attributes
 
+A classifier that uses > 2 attributes will likely be more accurate than one that only uses 2 attributes. This is because *each attribute can potentially give you more information*, meaning that more attributes can (somtimes) help us build a better classifier.
+
+### Predict Answer to Yes/No Question
+
+**Using the k-nearest neighbor method, we can predict the answer to yes/no question:**
+
+- Identify attributes/features that might help us predict the answer
+- Gather a training set of examples where the values of the attributes/features are known as well as the correct prediction
+- For future predictions, measure the value of the attributes and use the k-nearest neighbor classification to predict the answer to the question.
+
+### Distance in 3-Dimensional Space
+
+To compute the distance between three points, we use:
+
+```
+D = sqrt(((x_0 - x_1) ** 2) + ((y_0 - y_1) ** 2) + ((z_0 - z_1) ** 2))
+```
+
+The formula is generalized as us summing up the squares of the distances between each individual coordinate, then taking the square root of that.
+
+*Note that* `distance` *formula from the previous section still applies in R3.*
+
+### Implementation in Code
+
+Check out [Chapter 17.4.4: A Plan for the Implementation](https://inferentialthinking.com/chapters/17/4/Implementing_the_Classifier.html).
 
 ## Lecture 37, 11/19/21 (Wk13): Classifiers II
 
