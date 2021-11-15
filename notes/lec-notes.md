@@ -217,7 +217,7 @@
       - [Question 2.1.2](#question-212)
       - [Question 2.1.3](#question-213)
       - [Question 2.1.4](#question-214)
-    - [Question 2.1.5](#question-215)
+      - [Question 2.1.5](#question-215)
   - [Lecture 36, 11/17/21 (Wk13): Classifiers I](#lecture-36-111721-wk13-classifiers-i)
     - [Associated Reading](#associated-reading-8)
     - [Subtitle #1](#subtitle-1)
@@ -1879,7 +1879,7 @@ The default collection method of `.group` is `count`
 
 #### Question 1.1.3
 
-List comprehension is less effective then using .apply
+List comprehension is less effective then using `.apply`
 
 #### Question 1.1.4
 
@@ -1915,9 +1915,9 @@ Use distance_two_features with parameters based on `title`
 
 Isolate the columns you want from the training set, then use `.apply` and the function we just defined to add the 5th column to the table
 
-### Question 2.1.5
+#### Question 2.1.5
 
-The default collection method of .group may be helpful here
+The default collection method of `.group` may be helpful here
 
 
 ## Lecture 36, 11/17/21 (Wk13): Classifiers I
