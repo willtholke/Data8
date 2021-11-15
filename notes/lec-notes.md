@@ -197,23 +197,40 @@
     - [Bootstrap Prediction Interval](#bootstrap-prediction-interval)
     - [Assumptions](#assumptions)
   - [Lecture 34, 11/12/21 (Wk12): Privacy](#lecture-34-111221-wk12-privacy)
-    - [N/A](#na)
   - [Lecture 35, 11/15/21 (Wk13): Classification](#lecture-35-111521-wk13-classification)
     - [Associated Reading](#associated-reading-7)
-    - [Subtitle #1](#subtitle-1)
+    - [Context](#context)
+    - [k-Nearest Neighbors Classification](#k-nearest-neighbors-classification)
+    - [Distance Between Points w/ Two Attributes](#distance-between-points-w-two-attributes)
+    - [k-Nearest Neighbor Steps](#k-nearest-neighbor-steps)
+  - [Notes: Project 3 – Movie Classification Checkpoint](#notes-project-3--movie-classification-checkpoint)
+    - [Part 1: The Dataset](#part-1-the-dataset)
+      - [Question 1.0](#question-10)
+      - [Question 1.1.1](#question-111)
+      - [Question 1.1.2](#question-112)
+      - [Question 1.1.3](#question-113)
+      - [Question 1.1.4](#question-114)
+      - [Question 1.2.1](#question-121)
+      - [Question 1.2.2](#question-122)
+      - [Question 1.3.1](#question-131)
+      - [Question 2.1.1](#question-211)
+      - [Question 2.1.2](#question-212)
+      - [Question 2.1.3](#question-213)
+      - [Question 2.1.4](#question-214)
+    - [Question 2.1.5](#question-215)
   - [Lecture 36, 11/17/21 (Wk13): Classifiers I](#lecture-36-111721-wk13-classifiers-i)
     - [Associated Reading](#associated-reading-8)
-    - [Subtitle #1](#subtitle-1-1)
+    - [Subtitle #1](#subtitle-1)
   - [Lecture 37, 11/19/21 (Wk13): Classifiers II](#lecture-37-111921-wk13-classifiers-ii)
     - [Associated Reading](#associated-reading-9)
-    - [Subtitle #1](#subtitle-1-2)
+    - [Subtitle #1](#subtitle-1-1)
   - [Lecture 38, 11/22/21 (Wk14): Decisions](#lecture-38-112221-wk14-decisions)
     - [Associated Reading](#associated-reading-10)
-    - [Subtitle #1](#subtitle-1-3)
+    - [Subtitle #1](#subtitle-1-2)
   - [Lecture 39, 11/29/21 (Wk15): TBA](#lecture-39-112921-wk15-tba)
-    - [Subtitle #1](#subtitle-1-4)
+    - [Subtitle #1](#subtitle-1-3)
   - [Lecture 40, 12/03/21 (Wk15): Conclusion](#lecture-40-120321-wk15-conclusion)
-    - [Subtitle #1](#subtitle-1-5)
+    - [Subtitle #1](#subtitle-1-4)
 
 
 ## Lecture 1, 08/25/21 (Wk1): Introduction
@@ -1799,9 +1816,7 @@ The key takeaway is that **we must first decide whether the regression model hol
 
 ## Lecture 34, 11/12/21 (Wk12): Privacy
 
-### N/A
-
-No notes taken.
+N/A
 
 ## Lecture 35, 11/15/21 (Wk13): Classification
 
@@ -1812,9 +1827,98 @@ No notes taken.
 - [Chapter 17.2: Training and Testing](https://inferentialthinking.com/chapters/17/2/Training_and_Testing.html)
 - [Chapter 17.3: Rows of Tables](https://inferentialthinking.com/chapters/17/3/Rows_of_Tables.html)
 
-### Subtitle #1
+### Context
+
+**Machine learning** is a class of techniques for finding patterns in data and using those patterns to draw inferences or make predictions.
+
+**Classification** is about how we make predictions from past examples.
+
+### k-Nearest Neighbors Classification
+
+**k-Nearest neighbors classification** is where we look at `k` points that are closes to some other point, using the value of `k` points to predict some value for the other point.
+
+### Distance Between Points w/ Two Attributes
+
+To compute the distance between any pair of points, we use:
+```
+D = sqrt(((x_0 - x_1) ** 2) + ((y_0 - y_1) ** 2))
+```
+
+In python, we calculate `distance` as:
+```py
+def distance(point1, point2):
+  """ Returns the Euclidean distance between point1 and point2. 
   
--
+  @point1 array containing the coords of point1
+  @point2 array containing the coords of point2
+  """
+  return np.sqrt(np.sum((point 1 - point 2) **2))
+```
+
+### k-Nearest Neighbor Steps
+
+- **Step 1:** find the distance between your point and each point in the training sample
+- **Step 2:** sort the data table in increasing order of those distances
+- **Step 3:** take the top 5 rows of the sorted table
+
+## Notes: Project 3 – Movie Classification Checkpoint
+
+### Part 1: The Dataset
+
+#### Question 1.0
+
+The number in each row is a proportion < 1
+
+#### Question 1.1.1
+
+Isolating the word column to where the value in a row in that column equals a specific word will give you a table with one row
+
+#### Question 1.1.2
+
+The default collection method of `.group` is `count`
+
+#### Question 1.1.3
+
+List comprehension is less effective then using .apply
+
+#### Question 1.1.4
+
+The default collection method of `.group` may be helpful here
+
+#### Question 1.2.1
+
+The `standard_units` and `correlation` functions from the textbook (also provided in my notes) will be helpful here
+
+#### Question 1.2.2
+
+`standard_units` will be helpful here, and calculation of slope and intercept can be done with code from the textbook (also provided in my notes)
+
+#### Question 1.3.1
+
+In order to plot a horizontal bar chart with our two categorical variables, we need to make a table like that in [Chapter 7.1: Visualizing Categorial Distributions](https://inferentialthinking.com/chapters/07/1/Visualizing_Categorical_Distributions.html#bar-chart)
+
+<img src="images/../../images/proj3notes-0.png">
+
+#### Question 2.1.1
+
+Grab the features from the two relevant tables using `tbl.item(feature_name)` and calculate using the Euclidian distance function `distance` defined in [my notes for Lecture 35](#lecture-35-111521-wk13-classification).
+
+#### Question 2.1.2
+
+Generalize the logic from question 2.1.1
+
+#### Question 2.1.3
+
+Use distance_two_features with parameters based on `title`
+
+#### Question 2.1.4
+
+Isolate the columns you want from the training set, then use `.apply` and the function we just defined to add the 5th column to the table
+
+### Question 2.1.5
+
+The default collection method of .group may be helpful here
+
 
 ## Lecture 36, 11/17/21 (Wk13): Classifiers I
 
@@ -1824,13 +1928,13 @@ No notes taken.
 
 ### Subtitle #1
   
--
+
 
 ## Lecture 37, 11/19/21 (Wk13): Classifiers II
 
 ### Associated Reading
 
-- [Chapter 17.4: Implementing the Classifier](https://inferentialthinking.com/chapters/17/4/Implementing_the_Classifier.html)
+- [Chapter 17.5: The Accuracy of the Classifier](https://inferentialthinking.com/chapters/17/5/Accuracy_of_the_Classifier.html)
 
 ### Subtitle #1
   
