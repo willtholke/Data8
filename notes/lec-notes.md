@@ -226,14 +226,14 @@
     - [Implementation in Code](#implementation-in-code)
   - [Lecture 37, 11/19/21 (Wk13): Classifiers II](#lecture-37-111921-wk13-classifiers-ii)
     - [Associated Reading](#associated-reading-9)
-    - [Subtitle #1](#subtitle-1)
+    - [Choosing Testing/Training Data](#choosing-testingtraining-data)
   - [Lecture 38, 11/22/21 (Wk14): Decisions](#lecture-38-112221-wk14-decisions)
     - [Associated Reading](#associated-reading-10)
-    - [Subtitle #1](#subtitle-1-1)
+    - [Subtitle #1](#subtitle-1)
   - [Lecture 39, 11/29/21 (Wk15): TBA](#lecture-39-112921-wk15-tba)
-    - [Subtitle #1](#subtitle-1-2)
+    - [Subtitle #1](#subtitle-1-1)
   - [Lecture 40, 12/03/21 (Wk15): Conclusion](#lecture-40-120321-wk15-conclusion)
-    - [Subtitle #1](#subtitle-1-3)
+    - [Subtitle #1](#subtitle-1-2)
 
 
 ## Lecture 1, 08/25/21 (Wk1): Introduction
@@ -1963,9 +1963,13 @@ Check out [Chapter 17.4.4: A Plan for the Implementation](https://inferentialthi
 
 - [Chapter 17.5: The Accuracy of the Classifier](https://inferentialthinking.com/chapters/17/5/Accuracy_of_the_Classifier.html)
 
-### Subtitle #1
+### Choosing Testing/Training Data
   
--
+To test our classifier, we might put 50% of the data into the training set and the other 50% into the test set.
+
+The data taht we set aside for testin might be referred to as a **hold-out set**, and the strategy for estimating accuracy might be called the **hold-out method**
+
+Avoid using the test set for developing the classifier *at all costs*! Instead, only use the test set once, at the end, after the classifier has been developed using the **training data only**.
 
 ## Lecture 38, 11/22/21 (Wk14): Decisions
 
