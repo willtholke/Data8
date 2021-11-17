@@ -229,11 +229,15 @@
     - [Choosing Testing/Training Data](#choosing-testingtraining-data)
   - [Lecture 38, 11/22/21 (Wk14): Decisions](#lecture-38-112221-wk14-decisions)
     - [Associated Reading](#associated-reading-10)
-    - [Subtitle #1](#subtitle-1)
+    - [Updating a Prediction Based on New Information](#updating-a-prediction-based-on-new-information)
+    - [Bayes' Rule](#bayes-rule)
+    - [Formula: Posterior Probability](#formula-posterior-probability)
+    - [What does Bayes' Rule do?](#what-does-bayes-rule-do)
+    - [Subjective Probabilities](#subjective-probabilities)
   - [Lecture 39, 11/29/21 (Wk15): TBA](#lecture-39-112921-wk15-tba)
-    - [Subtitle #1](#subtitle-1-1)
+    - [Subtitle #1](#subtitle-1)
   - [Lecture 40, 12/03/21 (Wk15): Conclusion](#lecture-40-120321-wk15-conclusion)
-    - [Subtitle #1](#subtitle-1-2)
+    - [Subtitle #1](#subtitle-1-1)
 
 
 ## Lecture 1, 08/25/21 (Wk1): Introduction
@@ -1977,9 +1981,73 @@ Avoid using the test set for developing the classifier *at all costs*! Instead, 
 
 - [Chapter 18: Updating Predictions](https://inferentialthinking.com/chapters/18/Updating_Predictions.html)
   
-### Subtitle #1
-  
--
+### Updating a Prediction Based on New Information
+
+To update a prediction based on new information, we take the following steps:
+
+1) Check that the proportions of the dataset are correct
+2) Visualize the proportions in a **tree diagram**
+   - Take `tbl.pivot(feature1, feature2)` and draw said diagram based on the data
+
+In the pivot table of `students`, shown below...
+
+<img src="images/../../images/lec-38-0.png">
+
+...we see that 30 second year students have declared their major while the other 30 second years are undeclared; we also see that 32 third year students have declared their major while the remaining 8 are undeclared. Given the following three *knowns*...
+
+- 60% of the students are Second Years and the remaining 40% are Third Years
+- 50% of the Second Years have declared their major
+- 80% of the Third Years have declared their major
+
+...we can construct a tree diagram as follows:
+
+<img src="images/../../images/lec-38-1.png">
+
+In the above diagram, we see that the "Third Year, Declared" branch contains the proportion `0.4 * 0.8 = 0.32 = 32%` of the students
+
+**Question:** Can you calculate the chance of, given that they have declared, a student being a third year?
+
+**Answer:** Yes – `0.4 * 0.8/(0.6 * 0.5  +  0.4 * 0.8)` – and the calculation is the proportion of third years out of students who have already declared
+
+### Bayes' Rule
+
+Bayes' method solves the problem of updating chances when given new data. The definitions below fall under the content umbrella of Bayes' method:
+
+- **Prior probabilities** are one's beliefs about the dataset before any evidence has been found
+
+- **Likelihoods** are the chances of some assumption given a category under which to look (i.e. the chances of a student's major declaration status given their year)
+
+- **Posterior probabilities** are the chances of our categories *after* we have gathered an idea of what the data in each category says
+
+### Formula: Posterior Probability
+
+In our example, the **posterior probability** that the student is a third year, given that they are declared, is denoted as `P(third year | declared)`: `probability third year given declared`:
+
+```
+P(third year | declared) = 0.4 * 0.8 / (0.6 * 0.5 + 0.4 * 0.8)
+
+= (prior proabability of third year) * (likelihood of declared given third year) / total probability of declared
+```
+
+Alternatively,
+
+```
+P(second year| declared) = 0.6 * 0.5 / (0.6 * 0.5 + 0.4 * 0.8)
+
+= (prior proabability of second year) * (likelihood of declared given second year) / total probability of declared
+```
+
+### What does Bayes' Rule do?
+
+In summary, the *main use* of Bayes' Rule is to make decisions based on incomplete information, accepting new information at will.
+
+### Subjective Probabilities
+
+A probability of an outcome is
+- the frequency with which it will occur in repeated trials, *or*
+- the subjective degree of belief that it will (or has) occur(ed)
+
+**Subjective priors** are helpful for quantifying a belief that is relevant to a decision. In simple terms, a **subjective prior** is someone's informed opinion (basically just their belief) of the value of a parameter *prior* to collecting data.
 
 ## Lecture 39, 11/29/21 (Wk15): TBA
 
