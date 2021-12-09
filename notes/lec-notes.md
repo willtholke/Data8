@@ -234,10 +234,7 @@
     - [Formula: Posterior Probability](#formula-posterior-probability)
     - [What does Bayes' Rule do?](#what-does-bayes-rule-do)
     - [Subjective Probabilities](#subjective-probabilities)
-  - [Lecture 39, 11/29/21 (Wk15): TBA](#lecture-39-112921-wk15-tba)
-    - [Subtitle #1](#subtitle-1)
-  - [Lecture 40, 12/03/21 (Wk15): Conclusion](#lecture-40-120321-wk15-conclusion)
-    - [Subtitle #1](#subtitle-1-1)
+  - [Lectures 39 40, & 41: Miscellaneous Topics](#lectures-39-40--41-miscellaneous-topics)
 
 
 ## Lecture 1, 08/25/21 (Wk1): Introduction
@@ -2049,14 +2046,6 @@ A probability of an outcome is
 
 **Subjective priors** are helpful for quantifying a belief that is relevant to a decision. In simple terms, a **subjective prior** is someone's informed opinion (basically just their belief) of the value of a parameter *prior* to collecting data.
 
-## Lecture 39, 11/29/21 (Wk15): TBA
-
-### Subtitle #1
-  
--
-
-## Lecture 40, 12/03/21 (Wk15): Conclusion
-
-### Subtitle #1
+## Lectures 39 40, & 41: Miscellaneous Topics
   
 *Note:* Final exam on Monday, 12/13/21 @ 8:00am-11:00am
